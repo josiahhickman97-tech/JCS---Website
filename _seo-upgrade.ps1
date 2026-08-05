@@ -1,32 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+$ErrorActionPreference = "Stop"
+$root = "C:\Users\josia\jcs-safety-systems-website"
+$site = "https://jcssafetysystems.com"
+$pages = Get-Content (Join-Path $root "_seo-pages.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+
+function Get-SeoHead($meta) {
+  $title = [System.Net.WebUtility]::HtmlEncode($meta.title)
+  $desc = [System.Net.WebUtility]::HtmlEncode($meta.description)
+  $path = $meta.path
+  $og = $meta.ogImage
+  $canonical = if ($path -eq "/") { "$site/" } else { "$site$path" }
+  $ogUrl = "$site$og"
+@"
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Industrial Security Systems | Yards, Docks and Plants | JCS Safety Systems</title>
-  <meta name="description" content="Industrial video surveillance, LPR, and rugged outdoor security for warehouses, yards, and plants in South Mississippi." />
+  <title>$title</title>
+  <meta name="description" content="$desc" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="JCS Safety Systems" />
   <meta name="geo.region" content="US-MS" />
   <meta name="geo.placename" content="South Mississippi" />
-  <link rel="canonical" href="https://jcssafetysystems.com/industries/industrial" />
+  <link rel="canonical" href="$canonical" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="JCS Safety Systems" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Industrial Security Systems | Yards, Docks and Plants | JCS Safety Systems" />
-  <meta property="og:description" content="Industrial video surveillance, LPR, and rugged outdoor security for warehouses, yards, and plants in South Mississippi." />
-  <meta property="og:url" content="https://jcssafetysystems.com/industries/industrial" />
-  <meta property="og:image" content="https://jcssafetysystems.com/assets/warehouse.jpg" />
+  <meta property="og:title" content="$title" />
+  <meta property="og:description" content="$desc" />
+  <meta property="og:url" content="$canonical" />
+  <meta property="og:image" content="$ogUrl" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Industrial Security Systems | Yards, Docks and Plants | JCS Safety Systems" />
-  <meta name="twitter:description" content="Industrial video surveillance, LPR, and rugged outdoor security for warehouses, yards, and plants in South Mississippi." />
-  <meta name="twitter:image" content="https://jcssafetysystems.com/assets/warehouse.jpg" />
+  <meta name="twitter:title" content="$title" />
+  <meta name="twitter:description" content="$desc" />
+  <meta name="twitter:image" content="$ogUrl" />
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+"@
+}
+
+$localBusiness = @'
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -62,9 +76,12 @@
     }
   }
   </script>
-</head>
-<body>
-        <div class="topbar">
+'@
+
+function Get-Chrome {
+  $chevron = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>'
+@"
+  <div class="topbar">
     <div class="container">
       <div class="topbar-links">
         <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
@@ -83,7 +100,7 @@
         <a href="/">Home</a>
         <div class="nav-dropdown">
           <a href="/solutions" class="nav-parent-link">Solutions</a>
-          <button type="button" class="nav-chevron" aria-label="Open Solutions menu" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+          <button type="button" class="nav-chevron" aria-label="Open Solutions menu" aria-haspopup="true" aria-expanded="false">$chevron</button>
           <div class="dropdown-menu" role="menu">
             <a href="/services/video-surveillance"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></span><span><strong>Video Surveillance</strong><small>AI cameras, LPR, cloud and on-site</small></span></a>
             <a href="/services/access-control"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></span><span><strong>Access Control</strong><small>Keyless entry, schedules and logs</small></span></a>
@@ -94,7 +111,7 @@
         </div>
         <div class="nav-dropdown">
           <a href="/industries" class="nav-parent-link">Industries</a>
-          <button type="button" class="nav-chevron" aria-label="Open Industries menu" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
+          <button type="button" class="nav-chevron" aria-label="Open Industries menu" aria-haspopup="true" aria-expanded="false">$chevron</button>
           <div class="dropdown-menu" role="menu">
             <a href="/industries/retail-commercial"><span><strong>Retail and Commercial</strong><small>Stores, shops and businesses</small></span></a>
             <a href="/industries/k-12-education"><span><strong>K-12 Education</strong><small>Schools and campuses</small></span></a>
@@ -137,131 +154,13 @@
       <a href="/contact" class="btn btn-primary btn-block">Get a Free Quote</a>
     </div>
   </div>
-  <main>
-    <section class="page-hero has-image" style="--hero-image: url('/assets/warehouse.jpg')">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          <a href="/industries">Industries</a>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          <span>Industrial</span>
-        </nav>
-        <h1>Industrial</h1>
-        <p class="lead">Rugged coverage for yards, docks, production floors, and outdoor storage.</p>
-        <div class="hero-actions" style="margin-top:1.5rem;margin-bottom:0">
-          <a href="/contact" class="btn btn-primary btn-lg">Get a Free Assessment</a>
-          <a href="tel:+16013376852" class="btn btn-secondary btn-lg">(601) 337-6852</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="content-grid">
-          <div class="prose"><p>Industrial sites face theft, liability, and operational blind spots across large outdoor and indoor areas. JCS Safety Systems delivers durable video surveillance, vehicle and people detection, optional LPR, access control for gates and buildings, and fiber or long-run cabling built for harsh environments.</p></div>
-          <aside>
-            <div class="sidebar-card">
-              <img class="sidebar-photo" src="/assets/network-cabling.jpg" alt="Industrial security" width="400" height="160" loading="lazy" />
-              <h3>Protect this facility type</h3>
-              <p>Free consultation and on-site walkthrough for industrial facilities.</p>
-              <a href="/contact" class="btn btn-primary btn-block">Request a Quote</a>
-              <div class="contact-bits">
-                <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
-                <a href="mailto:Sales@jcsprotects.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Sales@jcsprotects.com</a>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+"@
+}
 
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-label">Challenges &amp; solutions</span>
-          <h2 class="section-title">How we secure industrial facilities</h2>
-          <p class="section-lead">From site walkthrough to go-live, we fix real problems — not generic templates.</p>
-        </div>
-        <div class="challenge-list">
-          <div class="challenge-row">
-            <div class="challenge-copy">
-              <span class="challenge-num">1</span>
-              <h3>Understanding the site</h3>
-              <p>Yards, docks, warehouses, and production lines each need different coverage and durability. We assess lighting, weather exposure, vehicle traffic, and high-value zones so the design matches real risk.</p>
-            </div>
-            <div class="challenge-media"><img src="/assets/video-surveillance.jpg" alt="Understanding the site" loading="lazy" /></div>
-          </div>
-          <div class="challenge-row reverse">
-            <div class="challenge-copy">
-              <span class="challenge-num">2</span>
-              <h3>Putting a plan together</h3>
-              <p>We specify outdoor-rated cameras, strategic access points, and network infrastructure that can span long distances without constant dropouts.</p>
-            </div>
-            <div class="challenge-media"><img src="/assets/network-cabling.jpg" alt="Putting a plan together" loading="lazy" /></div>
-          </div>
-          <div class="challenge-row">
-            <div class="challenge-copy">
-              <span class="challenge-num">3</span>
-              <h3>Installation</h3>
-              <p>Professional installation coordinated with your operations, tested thoroughly, and backed by warranties and responsive service.</p>
-            </div>
-            <div class="challenge-media"><img src="/assets/support.jpg" alt="Installation" loading="lazy" /></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-header centered">
-          <span class="section-label">Solutions</span>
-          <h2 class="section-title">Services that fit this industry</h2>
-          <p class="section-lead">Surveillance, access control, and network cabling — designed as one coordinated system.</p>
-        </div>
-            <div class="industry-services">
-              <article class="industry-service-card">
-                <div class="isc-img" style="background-image:url('/assets/video-surveillance.jpg')"></div>
-                <div class="isc-body">
-                  <h3>Surveillance Security</h3>
-                  <p>JCS Safety Systems provides tailored cloud-based and on-site video surveillance solutions, enhanced by AI features like real-time human and vehicle detection, License Plate Recognition (LPR), and line-crossing alerts. Our user-friendly platform and AI-powered search tools ensure easy access to live and recorded footage, with expert consultation for optimal camera placement.</p>
-                  <a href="/services/video-surveillance" class="card-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-                </div>
-              </article>
-              <article class="industry-service-card">
-                <div class="isc-img" style="background-image:url('/assets/access-control.jpg')"></div>
-                <div class="isc-body">
-                  <h3>Access Control</h3>
-                  <p>JCS Safety Systems offers advanced, user-friendly access control solutions, available as scalable cloud-based or on-premise systems, adaptable to any door size. Our keyless, touchless systems feature time-stamped logs and scheduled lock settings to ensure real-time tracking, accountability, and security for restricted areas.</p>
-                  <a href="/services/access-control" class="card-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-                </div>
-              </article>
-              <article class="industry-service-card">
-                <div class="isc-img" style="background-image:url('/assets/warehouse.jpg')"></div>
-                <div class="isc-body">
-                  <h3>Network Cabling</h3>
-                  <p>JCS Safety Systems provides expert network cabling solutions, installing fiber optic and category cabling (Cat 5e, Cat 6, fiber optic, and beyond) to ensure a reliable, high-speed network for your business. Planned installations deliver scalability and durability with minimal downtime.</p>
-                  <a href="/services/network-cabling" class="card-link">Learn more <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-                </div>
-              </article>
-            </div>
-        <div style="text-align:center;margin-top:2rem">
-          <a href="/contact" class="btn btn-primary">Talk through the right mix</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="container">
-        <div class="section-header centered">
-          <span class="section-label">Results</span>
-          <h2 class="section-title">What customers say</h2>
-        </div>
-        <div class="testimonials-grid">
-          <article class="testimonial">
-            <div class="stars" aria-label="5 stars">â˜…â˜…â˜…â˜…â˜…</div>
-            <blockquote>&ldquo;High-quality cameras that cut down on employee issues and inventory damage like never before.&rdquo;</blockquote>
-              <footer class="site-footer">
+function Get-Footer {
+@"
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -303,5 +202,115 @@
     </div>
   </footer>
   <script src="/js/main.js"></script>
-</body>
-</html>
+"@
+}
+
+function Convert-Links([string]$html) {
+  $html = $html -replace 'href="(\.\./)+index\.html"', 'href="/"'
+  $html = $html -replace 'href="index\.html"', 'href="/"'
+  $html = $html -replace 'href="(\.\./)?solutions\.html"', 'href="/solutions"'
+  $html = $html -replace 'href="(\.\./)?about\.html"', 'href="/about"'
+  $html = $html -replace 'href="(\.\./)?contact\.html"', 'href="/contact"'
+  $html = $html -replace 'href="(\.\./)?industries\.html"', 'href="/industries"'
+  $html = $html -replace 'href="(\.\./)?services/video-surveillance\.html"', 'href="/services/video-surveillance"'
+  $html = $html -replace 'href="(\.\./)?services/access-control\.html"', 'href="/services/access-control"'
+  $html = $html -replace 'href="(\.\./)?services/network-cabling\.html"', 'href="/services/network-cabling"'
+  $html = $html -replace 'href="(\.\./)?services/intrusion-systems\.html"', 'href="/services/intrusion-systems"'
+  $html = $html -replace 'href="(\.\./)?services/support\.html"', 'href="/services/support"'
+  $html = $html -replace 'href="video-surveillance\.html"', 'href="/services/video-surveillance"'
+  $html = $html -replace 'href="access-control\.html"', 'href="/services/access-control"'
+  $html = $html -replace 'href="network-cabling\.html"', 'href="/services/network-cabling"'
+  $html = $html -replace 'href="intrusion-systems\.html"', 'href="/services/intrusion-systems"'
+  $html = $html -replace 'href="support\.html"', 'href="/services/support"'
+  $html = $html -replace 'href="(\.\./)?industries/retail-commercial\.html"', 'href="/industries/retail-commercial"'
+  $html = $html -replace 'href="(\.\./)?industries/k-12-education\.html"', 'href="/industries/k-12-education"'
+  $html = $html -replace 'href="(\.\./)?industries/higher-education\.html"', 'href="/industries/higher-education"'
+  $html = $html -replace 'href="(\.\./)?industries/law-enforcement\.html"', 'href="/industries/law-enforcement"'
+  $html = $html -replace 'href="(\.\./)?industries/industrial\.html"', 'href="/industries/industrial"'
+  $html = $html -replace 'href="retail-commercial\.html"', 'href="/industries/retail-commercial"'
+  $html = $html -replace 'href="k-12-education\.html"', 'href="/industries/k-12-education"'
+  $html = $html -replace 'href="higher-education\.html"', 'href="/industries/higher-education"'
+  $html = $html -replace 'href="law-enforcement\.html"', 'href="/industries/law-enforcement"'
+  $html = $html -replace 'href="industrial\.html"', 'href="/industries/industrial"'
+  $html = $html -replace '(href|src)="(\.\./)*css/', '$1="/css/'
+  $html = $html -replace '(href|src)="(\.\./)*js/', '$1="/js/'
+  $html = $html -replace '(href|src)="(\.\./)*assets/', '$1="/assets/'
+  $html = $html -replace "url\('\.\./assets/", "url('/assets/"
+  $html = $html -replace 'url\("\.\./assets/', 'url("/assets/'
+  $html = $html -replace "url\('assets/", "url('/assets/"
+  $html = $html -replace 'url\("assets/', 'url("/assets/'
+  $html = $html -replace 'https://jcsprotects\.com', 'https://jcssafetysystems.com'
+  $html = $html -replace '>jcsprotects\.com<', '>jcssafetysystems.com<'
+  return $html
+}
+
+Get-ChildItem $root -Recurse -Filter *.html | ForEach-Object {
+  $full = $_.FullName
+  $rel = $full.Substring($root.Length + 1).Replace('\', '/')
+  $key = $rel -replace '\.html$', ''
+
+  $meta = $pages.$key
+  if (-not $meta) {
+    Write-Output "SKIP $rel"
+    return
+  }
+
+  $html = [System.IO.File]::ReadAllText($full)
+  $seoHead = Get-SeoHead $meta
+  $chrome = Get-Chrome
+  $footer = Get-Footer
+
+  $html = [regex]::Replace($html, '(?s)<head>.*?</head>', "<head>`r`n$seoHead`r`n</head>", 1)
+
+  $bodyMatch = [regex]::Match($html, '(?s)<body[^>]*>\s*')
+  $mainMatch = [regex]::Match($html, '(?s)<main[\s>]')
+  if (-not $bodyMatch.Success -or -not $mainMatch.Success) {
+    Write-Output "FAIL structure $rel"
+    return
+  }
+  $before = $html.Substring(0, $bodyMatch.Index + $bodyMatch.Length)
+  $fromMain = $html.Substring($mainMatch.Index)
+  $fromMain = [regex]::Replace($fromMain, '(?s)<footer[\s\S]*?</footer>\s*(?:<script[\s\S]*?</script>\s*)?(?=</body>|$)', "$footer`r`n", 1)
+
+  $html = $before + $chrome + "  " + $fromMain
+  $html = Convert-Links $html
+
+  if ($html -notmatch 'application/ld\+json') {
+    $html = $html.Replace('</head>', "$localBusiness`r`n</head>")
+  }
+
+  if ($key -eq 'contact') {
+    $html = $html.Replace('Mississippi &amp; surrounding region', 'South Mississippi')
+    $html = $html.Replace('Mississippi & surrounding region', 'South Mississippi')
+    if ($html -notmatch '313 Telly') {
+      $oldCard = @'
+              <div class="info-card">
+                <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                <div>
+                  <h3>Service area</h3>
+                  <p>South Mississippi<br /><a href="https://jcssafetysystems.com" target="_blank" rel="noopener">jcssafetysystems.com</a></p>
+                </div>
+              </div>
+'@
+      $newCard = @'
+              <div class="info-card">
+                <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                <div>
+                  <h3>Location and service area</h3>
+                  <p><strong>313 Telly Rd</strong><br />South Mississippi<br /><a href="https://maps.google.com/?q=313+Telly+Rd" target="_blank" rel="noopener">Get directions</a></p>
+                </div>
+              </div>
+'@
+      if ($html -match 'Service area') {
+        $html = [regex]::Replace($html, '(?s)<div class="info-card">\s*<div class="ic-icon">.*?Service area.*?</div>\s*</div>', $newCard.Trim(), 1)
+      } else {
+        $html = $html.Replace('</div>`r`n            </div>`r`n`r`n          <div class="form-panel">', "$newCard`r`n            </div>`r`n`r`n          <div class=`"form-panel`">")
+      }
+    }
+  }
+
+  [System.IO.File]::WriteAllText($full, $html, [System.Text.UTF8Encoding]::new($false))
+  Write-Output "OK $rel"
+}
+
+Write-Output "Done SEO upgrade."

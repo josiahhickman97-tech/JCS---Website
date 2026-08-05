@@ -403,7 +403,7 @@ p { color: var(--slate-300); }
   inset: 0;
   background:
     linear-gradient(105deg, rgba(7,11,22,0.94) 0%, rgba(7,11,22,0.82) 48%, rgba(7,11,22,0.55) 100%),
-    url("../assets/hero-security.jpg") center/cover no-repeat;
+    url("/assets/hero-security.jpg") center/cover no-repeat;
   z-index: -2;
 }
 .hero::after {
@@ -1385,6 +1385,14 @@ a.industry-card { color: inherit; text-decoration: none; }
   margin: 1rem 0 1.25rem;
   max-width: 32ch;
 }
+.footer-address {
+  font-size: 0.875rem !important;
+  line-height: 1.6;
+  margin: 0 0 1.15rem !important;
+}
+.footer-address strong { color: var(--white); font-weight: 600; }
+.footer-address a { color: var(--slate-300); }
+.footer-address a:hover { color: var(--cyan-400); }
 .footer-col h4 {
   font-size: 0.85rem;
   font-weight: 700;
@@ -1574,6 +1582,13 @@ a.industry-card { color: inherit; text-decoration: none; }
   grid-template-rows: 180px 180px;
   gap: 0.85rem;
 }
+.home-gallery-lg {
+  grid-template-columns: 1.35fr 1fr 1fr 1fr;
+  grid-template-rows: 170px 170px;
+}
+.home-gallery-lg figure:first-child {
+  grid-row: span 2;
+}
 .home-gallery figure {
   margin: 0;
   border-radius: var(--radius-md);
@@ -1656,31 +1671,46 @@ a.industry-card { color: inherit; text-decoration: none; }
   opacity: 0.75;
   pointer-events: none;
 }
+@media (max-width: 1024px) {
+  .home-gallery-lg {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 160px 150px 150px;
+  }
+  .home-gallery-lg figure:first-child {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
 @media (max-width: 768px) {
   .photo-grid { grid-template-columns: 1fr; }
   .split-photo { min-height: 220px; }
   .page-hero.has-image { min-height: 300px; padding: 3.5rem 0 2.5rem; }
   .service-gallery { grid-template-columns: 1fr; }
   .service-feature-img { min-height: 220px; }
-  .home-gallery {
+  .home-gallery,
+  .home-gallery-lg {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 160px 140px 140px;
+    grid-template-rows: none;
   }
-  .home-gallery figure:first-child {
+  .home-gallery figure:first-child,
+  .home-gallery-lg figure:first-child {
     grid-column: span 2;
     grid-row: span 1;
   }
+  .home-gallery figure,
+  .home-gallery-lg figure {
+    min-height: 150px;
+  }
+  .topbar-links a:last-child { display: none; }
 }
 @media (max-width: 480px) {
-  .home-gallery {
+  .home-gallery,
+  .home-gallery-lg {
     grid-template-columns: 1fr;
-    grid-template-rows: none;
   }
-  .home-gallery figure:first-child {
+  .home-gallery figure:first-child,
+  .home-gallery-lg figure:first-child {
     grid-column: auto;
-  }
-  .home-gallery figure {
-    min-height: 160px;
   }
 }
 
