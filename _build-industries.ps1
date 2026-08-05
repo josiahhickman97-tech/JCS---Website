@@ -16,7 +16,7 @@ function Get-Header([int]$depth) {
     <div class="container">
       <div class="topbar-links">
         <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
-        <a href="mailto:Sales@jcsprotects.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Sales@jcsprotects.com</a>
+        <a href="mailto:sales@jcssafetysystems.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>sales@jcssafetysystems.com</a>
       </div>
       <span class="hide-sm">Phone support within 24 hrs · On-site within 48 hrs</span>
     </div>
@@ -121,7 +121,7 @@ function Get-Footer([int]$depth) {
           <li><a href="$about">About Us</a></li>
           <li><a href="$ind">All Industries</a></li>
           <li><a href="$contact">Contact</a></li>
-          <li><a href="mailto:Sales@jcsprotects.com">Sales@jcsprotects.com</a></li>
+          <li><a href="mailto:sales@jcssafetysystems.com">sales@jcssafetysystems.com</a></li>
         </ul></div>
       </div>
       <div class="footer-bottom">
@@ -246,7 +246,7 @@ $header
               <a href="../contact.html" class="btn btn-primary btn-block">Request a Quote</a>
               <div class="contact-bits">
                 <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
-                <a href="mailto:Sales@jcsprotects.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Sales@jcsprotects.com</a>
+                <a href="mailto:sales@jcssafetysystems.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>sales@jcssafetysystems.com</a>
               </div>
             </div>
           </aside>
@@ -321,7 +321,7 @@ $tHtml
         <div class="section-header">
           <span class="section-label">FAQ</span>
           <h2 class="section-title">Common questions</h2>
-          <p class="section-lead">Can&rsquo;t find your answer? Email <a href="mailto:Sales@jcsprotects.com" class="text-cyan">Sales@jcsprotects.com</a> or call <a href="tel:+16013376852" class="text-cyan">(601) 337-6852</a>.</p>
+          <p class="section-lead">Can&rsquo;t find your answer? Email <a href="mailto:sales@jcssafetysystems.com" class="text-cyan">sales@jcssafetysystems.com</a> or call <a href="tel:+16013376852" class="text-cyan">(601) 337-6852</a>.</p>
         </div>
         <div class="faq-list">
 $faqsHtml

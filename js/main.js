@@ -89,7 +89,7 @@
       }
 
       try {
-        const res = await fetch("https://formsubmit.co/ajax/Sales@jcsprotects.com", {
+        const res = await fetch("https://formsubmit.co/ajax/sales@jcssafetysystems.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -124,7 +124,7 @@
           errorEl.textContent = "Could not send through the form. Opening your email app instead…";
           errorEl.classList.add("show");
         }
-        window.location.href = `mailto:Sales@jcsprotects.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:sales@jcssafetysystems.com?subject=${subject}&body=${body}`;
       } finally {
         if (btn) {
           btn.classList.remove("loading");

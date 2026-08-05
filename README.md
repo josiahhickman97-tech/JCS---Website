@@ -19,7 +19,7 @@ Home
 │   ├── Law Enforcement & Corrections
 │   └── Industrial
 ├── About
-└── Contact (FormSubmit → Sales@jcsprotects.com)
+└── Contact (FormSubmit → sales@jcssafetysystems.com)
 ```
 
 ### Industry page structure (from your content doc)
@@ -48,11 +48,11 @@ Visit http://localhost:8080
 
 - Logo: `assets/logo.png` (your official JCS logo)
 - Colors: navy brand blue `#1a2f6b` / `#244a8a`
-- Contact: **(601) 337-6852** · **Sales@jcsprotects.com**
+- Contact: **(601) 337-6852** · **sales@jcssafetysystems.com**
 
 ## Contact form
 
-Uses [FormSubmit](https://formsubmit.co) AJAX to `Sales@jcsprotects.com`.  
+Uses [FormSubmit](https://formsubmit.co) AJAX to `sales@jcssafetysystems.com`.  
 **First live submission** sends a confirmation email to that address — click activate once. After that, submissions arrive in the inbox.
 
 ## Deploy
@@ -76,5 +76,5 @@ powershell -ExecutionPolicy Bypass -File .\_build-industries.ps1
 
 1. Replace stock photos with real JCS install photos  
 2. Add a public street address on Contact when ready  
-3. Confirm FormSubmit activation email for Sales@jcsprotects.com  
+3. Confirm FormSubmit activation email for sales@jcssafetysystems.com  
 4. Add Google Business / Analytics tags if desired  
