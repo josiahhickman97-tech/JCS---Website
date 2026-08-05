@@ -1,0 +1,281 @@
+[
+  {
+    "slug": "retail-commercial",
+    "title": "Retail & Commercial",
+    "short": "Retail Commercial",
+    "heroImg": "access-control.jpg",
+    "sub": "Advanced security that protects inventory, staff, and customers — with AI alerts you can act on in real time.",
+    "body": "JCS Safety Systems are crucial for protecting your business location by providing advanced security solutions that ensure safety, reduce risks, and enhance operational efficiency. With cutting-edge technology, JCS offers systems designed to monitor for and detect potential threats in real time, as well as have the ability to review past recorded events. This proactive approach minimizes the likelihood of security breaches, property damage, or theft, which can have costly consequences for your business. One of the standout features of JCS Safety Systems is the integration of AI analytics. This powerful tool enables real-time notifications, allowing business owners and security teams to respond immediately to incidents as they unfold. Furthermore, the system's searchable event logs provide an organized and efficient way to track past activities, offering valuable insights for decision-making and future prevention strategies.",
+    "c1t": "Understanding the needs of the site",
+    "c1b": "Every retail location has its own unique pain points—whether it's shoplifters targeting high-value displays, employees propping open back doors, customers slipping in restricted areas, or inventory disappearing after hours. That's why JCS Safety Systems starts every project with in-depth conversations and on-site walkthroughs to uncover exactly what's happening with your customers and staff, so the solution we design fixes the real problems instead of creating new ones.",
+    "c1i": "video-surveillance.jpg",
+    "c2t": "Putting a plan together",
+    "c2b": "Once we understand your specific issues, the next hurdle is designing a system that delivers maximum protection without breaking the budget. JCS Safety Systems uses trusted, industry-leading equipment from proven manufacturers to ensure long-term reliability and performance. We then craft a cost-effective solution that strategically places cameras and access points exactly where they'll make the biggest impact.",
+    "c2i": "access-control.jpg",
+    "c3t": "Installation",
+    "c3b": "JCS Safety Systems installs your system with precision, works around your hours to minimize disruption, and delivers a clean, fully functional setup that performs perfectly from day one. Backed by industry-leading warranties and ongoing support, you get reliable security with no downtime or follow-up headaches.",
+    "c3i": "support.jpg",
+    "faqs": [
+      {
+        "q": "How does JCS assess security needs for my retail or business location?",
+        "a": "Every location has unique challenges, from shoplifting and employee errors to unauthorized access. JCS Safety Systems conducts in-depth consultations and on-site walkthroughs to understand exactly what's happening in your space, allowing us to design solutions that address real problems effectively."
+      },
+      {
+        "q": "What types of security systems can JCS provide for businesses?",
+        "a": "We offer a full range of solutions including video surveillance, access control, and network infrastructure. Our systems are tailored for your environment, ensuring high-value areas are monitored, restricted zones are protected, and staff and customer activity is safely managed."
+      },
+      {
+        "q": "What support and maintenance does JCS offer after installation?",
+        "a": "JCS provides ongoing support backed by industry-leading warranties. Whether you need help troubleshooting, adjusting settings, or adding new devices, our team ensures your system stays reliable with minimal downtime. Phone assistance within 24 hours and on-site service within 48 hours."
+      },
+      {
+        "q": "Can JCS provide a cost-effective solution without sacrificing security?",
+        "a": "Yes. We offer different packages and equipment options to fit your needs and budget. Our team will help you choose the best solution, placing cameras and access points strategically for maximum protection and value."
+      }
+    ],
+    "testimonials": [
+      {
+        "q": "JCS Safety Systems did an amazing job setting up high-quality cameras at 1st Place Express Carwash. The well-placed cameras allow me to see more than I ever have before, and I've seen way fewer customer complaints since they were installed.",
+        "n": "Wade",
+        "b": "1st Place Express Carwash"
+      },
+      {
+        "q": "JCS totally changed how we handle things with their cloud-based camera system. My phone gets instant alerts when someone shows up, so I can pop out and greet customers right away.",
+        "n": "Jonathan",
+        "b": "JK Structures"
+      },
+      {
+        "q": "They set up awesome cameras that totally boosted our security. The well-placed, high-quality cameras help us keep an eye on things, cutting down on employee issues and inventory damage.",
+        "n": "Micah",
+        "b": "EZ Kruiser"
+      }
+    ]
+  },
+  {
+    "slug": "k-12-education",
+    "title": "K-12 Education",
+    "short": "K-12 Education",
+    "heroImg": "video-surveillance.jpg",
+    "sub": "Safer schools with visibility, controlled entry, and systems staff can actually use day to day.",
+    "body": "JCS Safety Systems helps K-12 schools protect students, staff, and facilities with video surveillance, access control, and reliable network infrastructure. From vestibules and hallways to parking lots and athletic areas, we design coverage that supports administrators and campus safety teams — with AI alerts, searchable footage, and access logs that improve accountability without unnecessary complexity.",
+    "c1t": "Understanding the needs of the campus",
+    "c1b": "Every school has different priorities — visitor management at the front office, after-hours facility use, bus and parking areas, or limited sightlines in older buildings. We start with conversations and walkthroughs so we design around how your school actually operates during the day, evenings, and events.",
+    "c1i": "video-surveillance.jpg",
+    "c2t": "Putting a plan together",
+    "c2b": "We map cameras and controlled doors where they deliver the most value for safety and operations, using proven equipment and clear budgets so districts can plan confidently.",
+    "c2i": "access-control.jpg",
+    "c3t": "Installation",
+    "c3b": "We install with minimal disruption to instructional time, test every system thoroughly, and train the people who will use it — then stand behind the work with responsive support.",
+    "c3i": "support.jpg",
+    "faqs": [
+      {
+        "q": "How do you work around the school calendar?",
+        "a": "We plan installs and service around instructional hours, breaks, and events whenever possible to keep classrooms and offices running smoothly."
+      },
+      {
+        "q": "Can staff view cameras from phones or tablets?",
+        "a": "Yes. Secure apps allow authorized staff to view live and recorded video with control over who sees which cameras."
+      },
+      {
+        "q": "Do you support multi-building campuses?",
+        "a": "Yes. We design systems that scale across buildings, parking, and portable classrooms with the right cabling foundation."
+      },
+      {
+        "q": "What about visitor and staff access?",
+        "a": "Access control can secure main entries, admin offices, and restricted areas with schedules and time-stamped logs."
+      }
+    ],
+    "testimonials": [
+      {
+        "q": "The well-placed cameras allow me to see more than I ever have before. Working with their team was a great experience.",
+        "n": "Wade",
+        "b": "1st Place Express Carwash"
+      },
+      {
+        "q": "Instant alerts on my phone changed how we respond when someone arrives on site.",
+        "n": "Jonathan",
+        "b": "JK Structures"
+      },
+      {
+        "q": "High-quality cameras and a smooth install. Highly recommend them.",
+        "n": "Micah",
+        "b": "EZ Kruiser"
+      }
+    ]
+  },
+  {
+    "slug": "higher-education",
+    "title": "Higher Education",
+    "short": "Higher Education",
+    "heroImg": "network-cabling.jpg",
+    "sub": "Campus-scale video, access, and infrastructure for multi-building universities and colleges.",
+    "body": "Higher education campuses need security that scales — residence halls, academic buildings, parking decks, and shared facilities. JCS Safety Systems delivers video surveillance with AI and LPR options, building access control, and structured cabling so your safety and IT teams get reliable coverage and clean infrastructure across the campus footprint.",
+    "c1t": "Understanding campus operations",
+    "c1b": "Universities juggle open environments, after-hours labs, large parking areas, and many stakeholders. We assess buildings, pathways, and risk areas so the design fits real student and staff flow — not a generic template.",
+    "c1i": "video-surveillance.jpg",
+    "c2t": "Putting a plan together",
+    "c2b": "We phase systems where needed, prioritize high-risk zones, and specify equipment that can grow with new buildings and renovations.",
+    "c2i": "network-cabling.jpg",
+    "c3t": "Installation",
+    "c3b": "Professional install with testing, documentation, and training for campus safety and facilities teams, plus ongoing support after go-live.",
+    "c3i": "support.jpg",
+    "faqs": [
+      {
+        "q": "Can you support multi-building access control?",
+        "a": "Yes. Scalable access systems work across buildings with schedules, credentials, and audit logs."
+      },
+      {
+        "q": "Do you offer license plate recognition for parking?",
+        "a": "Yes. LPR cameras help monitor lots and identify vehicles of interest as part of a broader video plan."
+      },
+      {
+        "q": "How do you handle network infrastructure?",
+        "a": "We install and test structured Cat and fiber cabling so cameras and access devices stay reliable."
+      },
+      {
+        "q": "Who can view campus cameras?",
+        "a": "Access is customizable by role so campus safety, facilities, and leadership only see what they need."
+      }
+    ],
+    "testimonials": [
+      {
+        "q": "Cloud-based cameras with instant alerts completely changed how we manage our sites.",
+        "n": "Jonathan",
+        "b": "JK Structures"
+      },
+      {
+        "q": "Well-placed, high-quality cameras and a team that was easy to work with.",
+        "n": "Micah",
+        "b": "EZ Kruiser"
+      },
+      {
+        "q": "I've seen way fewer issues since the cameras were installed. Totally recommend them.",
+        "n": "Wade",
+        "b": "1st Place Express Carwash"
+      }
+    ]
+  },
+  {
+    "slug": "law-enforcement",
+    "title": "Law Enforcement & Corrections",
+    "short": "Law Enforcement",
+    "heroImg": "intrusion-systems.jpg",
+    "sub": "Reliable recording, perimeter awareness, and audit-ready access for facilities that can't afford downtime.",
+    "body": "Law enforcement and corrections facilities depend on systems that document events clearly and stay online. JCS Safety Systems designs video surveillance, access control, and intrusion detection with durability, evidence-quality recording, and support response times you can plan around — phone help within 24 hours and on-site within 48 hours.",
+    "c1t": "Understanding operational requirements",
+    "c1b": "These environments demand clear retention policies, controlled access, and coverage of perimeters, entries, and sensitive zones. We start with your operational and documentation needs so the system supports investigations and day-to-day safety.",
+    "c1i": "intrusion-systems.jpg",
+    "c2t": "Putting a plan together",
+    "c2b": "We specify proven hardware, redundant pathways where needed, and layouts that reduce blind spots while remaining maintainable for your staff.",
+    "c2i": "video-surveillance.jpg",
+    "c3t": "Installation",
+    "c3b": "Careful installation, thorough testing, and documentation — with ongoing support agreements to keep systems ready when they matter most.",
+    "c3i": "support.jpg",
+    "faqs": [
+      {
+        "q": "Is footage suitable for review and documentation?",
+        "a": "We recommend high-resolution systems with reliable recording and searchable tools so incidents can be located quickly."
+      },
+      {
+        "q": "Can access be tightly controlled and logged?",
+        "a": "Yes. Access control provides time-stamped entry logs and credential management for restricted areas."
+      },
+      {
+        "q": "What about perimeter and intrusion detection?",
+        "a": "We design intrusion systems with sensitive sensors and alerts that complement video coverage."
+      },
+      {
+        "q": "How fast is support when something fails?",
+        "a": "Phone assistance within 24 hours and on-site service within 48 hours, with service agreements available."
+      }
+    ],
+    "testimonials": [
+      {
+        "q": "Professional install and cameras that actually cover what we need to see.",
+        "n": "Wade",
+        "b": "1st Place Express Carwash"
+      },
+      {
+        "q": "Instant alerts and remote visibility made a real difference for our operations.",
+        "n": "Jonathan",
+        "b": "JK Structures"
+      },
+      {
+        "q": "Reliable team and systems that cut down on issues we used to deal with constantly.",
+        "n": "Micah",
+        "b": "EZ Kruiser"
+      }
+    ]
+  }
+    ],
+    "testimonials": [
+      {
+        "q": "I had a great experience working with their team and totally recommend them.",
+        "n": "Wade",
+        "b": "1st Place Express Carwash"
+      },
+      {
+        "q": "Cloud cameras and alerts completely changed how we handle arrivals on site.",
+        "n": "Jonathan",
+        "b": "JK Structures"
+      },
+      {
+        "q": "Well-placed cameras and a breeze of a project. Highly recommend.",
+        "n": "Micah",
+        "b": "EZ Kruiser"
+      }
+    ]
+  },
+  {
+    "slug": "industrial",
+    "title": "Industrial",
+    "short": "Industrial",
+    "heroImg": "network-cabling.jpg",
+    "sub": "Rugged coverage for yards, docks, production floors, and outdoor storage.",
+    "body": "Industrial sites face theft, liability, and operational blind spots across large outdoor and indoor areas. JCS Safety Systems delivers durable video surveillance, vehicle and people detection, optional LPR, access control for gates and buildings, and fiber or long-run cabling built for harsh environments.",
+    "c1t": "Understanding the site",
+    "c1b": "Yards, docks, warehouses, and production lines each need different coverage and durability. We assess lighting, weather exposure, vehicle traffic, and high-value zones so the design matches real risk.",
+    "c1i": "video-surveillance.jpg",
+    "c2t": "Putting a plan together",
+    "c2b": "We specify outdoor-rated cameras, strategic access points, and network infrastructure that can span long distances without constant dropouts.",
+    "c2i": "network-cabling.jpg",
+    "c3t": "Installation",
+    "c3b": "Professional installation coordinated with your operations, tested thoroughly, and backed by warranties and responsive service.",
+    "c3i": "support.jpg",
+    "faqs": [
+      {
+        "q": "Can systems handle outdoor and harsh environments?",
+        "a": "Yes. We recommend durable outdoor-rated equipment and proper mounting for yards, docks, and industrial buildings."
+      },
+      {
+        "q": "Do you support long cable runs and fiber?",
+        "a": "Yes. Fiber and structured category cabling keep cameras and access devices reliable across large sites."
+      },
+      {
+        "q": "Can AI detect people and vehicles in busy areas?",
+        "a": "Yes. People and vehicle detection plus line-crossing alerts help reduce noise and highlight real events."
+      },
+      {
+        "q": "Is license plate recognition available?",
+        "a": "Yes. LPR options help identify vehicles entering lots, yards, and controlled areas."
+      }
+    ],
+    "testimonials": [
+      {
+        "q": "High-quality cameras that cut down on employee issues and inventory damage like never before.",
+        "n": "Micah",
+        "b": "EZ Kruiser"
+      },
+      {
+        "q": "Instant alerts when someone shows up so we can respond right away.",
+        "n": "Jonathan",
+        "b": "JK Structures"
+      },
+      {
+        "q": "Well-placed cameras and fewer headaches since day one.",
+        "n": "Wade",
+        "b": "1st Place Express Carwash"
+      }
+    ]
+  }
+]
