@@ -3,35 +3,78 @@
 (function () {
   "use strict";
 
-  // Mobile nav
   const toggle = document.querySelector(".nav-toggle");
   const mobileNav = document.querySelector(".mobile-nav");
+
+  function closeMobileNav() {
+    if (!mobileNav || !toggle) return;
+    mobileNav.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    mobileNav.querySelectorAll(".mob-group.open").forEach((g) => {
+      g.classList.remove("open");
+      const b = g.querySelector(".mob-group-toggle");
+      if (b) b.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  // Mobile nav open/close
   if (toggle && mobileNav) {
-    toggle.addEventListener("click", () => {
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
       const open = mobileNav.classList.toggle("open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       document.body.style.overflow = open ? "hidden" : "";
+      if (!open) {
+        mobileNav.querySelectorAll(".mob-group.open").forEach((g) => {
+          g.classList.remove("open");
+          const b = g.querySelector(".mob-group-toggle");
+          if (b) b.setAttribute("aria-expanded", "false");
+        });
+      }
     });
+
+    // Accordion: Solutions / Industries expand only when + is tapped
+    mobileNav.querySelectorAll(".mob-group-toggle").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const group = btn.closest(".mob-group");
+        if (!group) return;
+        const willOpen = !group.classList.contains("open");
+        mobileNav.querySelectorAll(".mob-group.open").forEach((g) => {
+          g.classList.remove("open");
+          const b = g.querySelector(".mob-group-toggle");
+          if (b) b.setAttribute("aria-expanded", "false");
+        });
+        if (willOpen) {
+          group.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // Close menu when a real link is followed
     mobileNav.querySelectorAll("a").forEach((a) => {
       a.addEventListener("click", () => {
-        mobileNav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMobileNav();
       });
     });
   }
 
-  // Desktop dropdowns: chevron toggles menu; parent label is a real link
+  // Desktop dropdowns only (chevron); ignore mobile accordion buttons
   document.querySelectorAll(".nav-dropdown").forEach((dd) => {
-    const btn = dd.querySelector(".nav-chevron, button");
+    const btn = dd.querySelector(".nav-chevron");
     if (!btn) return;
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
+      // Skip on small screens — desktop nav is hidden
+      if (window.matchMedia("(max-width: 768px)").matches) return;
       const isOpen = dd.classList.contains("open");
       document.querySelectorAll(".nav-dropdown.open").forEach((d) => {
         d.classList.remove("open");
-        const b = d.querySelector(".nav-chevron, button");
+        const b = d.querySelector(".nav-chevron");
         if (b) b.setAttribute("aria-expanded", "false");
       });
       if (!isOpen) {
@@ -40,22 +83,22 @@
       }
     });
   });
+
   document.addEventListener("click", () => {
     document.querySelectorAll(".nav-dropdown.open").forEach((d) => {
       d.classList.remove("open");
-      const b = d.querySelector(".nav-chevron, button");
+      const b = d.querySelector(".nav-chevron");
       if (b) b.setAttribute("aria-expanded", "false");
     });
   });
 
-  // Contact form → FormSubmit.co (no backend required)
+  // Contact form → FormSubmit.co
   const form = document.getElementById("contact-form");
   if (form) {
-    // Show success if redirected back with ?sent=1
     if (new URLSearchParams(window.location.search).get("sent") === "1") {
       const success = form.querySelector(".form-success");
       if (success) {
-        success.textContent = "Thank you — your message was sent. We’ll get back to you shortly.";
+        success.textContent = "Thank you — your message was sent. We'll get back to you shortly.";
         success.classList.add("show");
       }
     }
@@ -110,12 +153,11 @@
         if (!res.ok) throw new Error("Send failed");
 
         if (success) {
-          success.textContent = "Thank you — your message was sent. We’ll get back to you shortly.";
+          success.textContent = "Thank you — your message was sent. We'll get back to you shortly.";
           success.classList.add("show");
         }
         form.reset();
       } catch (err) {
-        // Fallback: open mail client
         const subject = encodeURIComponent(`Website inquiry${service ? " — " + service : ""} from ${name}`);
         const body = encodeURIComponent(
           `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "—"}\nService interest: ${service || "—"}\n\nMessage:\n${message}`
@@ -136,10 +178,13 @@
 
   // Active nav highlight
   const path = window.location.pathname.replace(/\/$/, "") || "/";
-  const page = path.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav > a, .mobile-nav a").forEach((a) => {
-    const href = a.getAttribute("href") || "";
-    if (href.endsWith(page) || (page === "index.html" && (href === "/" || href.endsWith("index.html")))) {
+  const page = path.split("/").filter(Boolean).pop() || "";
+  document.querySelectorAll(".nav > a, .nav-parent-link, .mobile-nav > a, .mobile-nav .mob-group-link").forEach((a) => {
+    const href = (a.getAttribute("href") || "").replace(/\/$/, "");
+    if (!href) return;
+    if (href === "/" && (path === "/" || path === "")) {
+      a.classList.add("active");
+    } else if (href !== "/" && path.endsWith(href.replace(/^\//, "")) || path === href) {
       a.classList.add("active");
     }
   });

@@ -53,7 +53,7 @@ $localBusiness = @'
     "email": "sales@jcssafetysystems.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "313 Telly Rd",
+      "streetAddress": "PMB 53 313 Telly Rd",
       "addressRegion": "MS",
       "addressCountry": "US"
     },
@@ -86,7 +86,7 @@ function Get-Chrome {
       <div class="topbar-links">
         <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
         <a href="mailto:sales@jcssafetysystems.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>sales@jcssafetysystems.com</a>
-        <a href="https://maps.google.com/?q=313+Telly+Rd" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>313 Telly Rd | South Mississippi</a>
+        <a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>PMB 53 313 Telly Rd | South Mississippi</a>
       </div>
       <span class="hide-sm">Phone support within 24 hrs | On-site within 48 hrs</span>
     </div>
@@ -167,7 +167,7 @@ function Get-Footer {
           <a href="/" class="logo"><img src="/assets/logo.png" alt="JCS Safety Systems logo" class="logo-img" width="160" height="102" /></a>
           <p>AI-powered video surveillance, access control, intrusion systems, and network cabling for South Mississippi.</p>
           <p class="footer-address">
-            <strong>313 Telly Rd</strong><br />
+            <strong>PMB 53 313 Telly Rd</strong><br />
             South Mississippi<br />
             <a href="tel:+16013376852">(601) 337-6852</a><br />
             <a href="mailto:sales@jcssafetysystems.com">sales@jcssafetysystems.com</a>
@@ -197,7 +197,7 @@ function Get-Footer {
       </div>
       <div class="footer-bottom">
         <span>Copyright 2026 JCS Safety Systems. All rights reserved.</span>
-        <span>Serving South Mississippi | 313 Telly Rd</span>
+        <span>Serving South Mississippi | PMB 53 313 Telly Rd</span>
       </div>
     </div>
   </footer>
@@ -297,7 +297,7 @@ Get-ChildItem $root -Recurse -Filter *.html | ForEach-Object {
                 <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
                 <div>
                   <h3>Location and service area</h3>
-                  <p><strong>313 Telly Rd</strong><br />South Mississippi<br /><a href="https://maps.google.com/?q=313+Telly+Rd" target="_blank" rel="noopener">Get directions</a></p>
+                  <p><strong>PMB 53 313 Telly Rd</strong><br />South Mississippi<br /><a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener">Get directions</a></p>
                 </div>
               </div>
 '@
