@@ -65,6 +65,7 @@
   // Desktop dropdowns only (chevron); ignore mobile accordion buttons
   document.querySelectorAll(".nav-dropdown").forEach((dd) => {
     const btn = dd.querySelector(".nav-chevron");
+    const menu = dd.querySelector(".dropdown-menu");
     if (!btn) return;
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -82,6 +83,12 @@
         btn.setAttribute("aria-expanded", "true");
       }
     });
+    // Keep menu open while interacting with links (document click closes elsewhere)
+    if (menu) {
+      menu.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
+    }
   });
 
   document.addEventListener("click", () => {

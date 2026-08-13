@@ -5,14 +5,24 @@ $root = $PSScriptRoot
 if (-not $root) { $root = "C:\Users\josia\jcs-safety-systems-website" }
 
 $shell = Get-Content (Join-Path $root "industries.html") -Raw
-if ($shell -notmatch '(?s)(<body>.*?</header>\s*<div class="mobile-nav".*?</div>)') {
-  throw "Could not extract header/mobile-nav from industries.html"
+# Extract full chrome: from <body> through end of mobile-nav (everything before <main>).
+# Do NOT use a non-greedy .*?</div>  -  that stops at the first nested </div> and
+# leaves main nested inside .mobile-nav (display:none on desktop = blank pages).
+$bodyIdx = $shell.IndexOf("<body>")
+$mainIdx = $shell.IndexOf("<main>")
+$footerIdx = $shell.IndexOf('<footer class="site-footer">')
+if ($bodyIdx -lt 0 -or $mainIdx -lt 0 -or $footerIdx -lt 0) {
+  throw "Could not locate body/main/footer markers in industries.html"
 }
-$headerBlock = $Matches[1]
-if ($shell -notmatch '(?s)(<footer class="site-footer">.*?</html>)') {
-  throw "Could not extract footer from industries.html"
+$headerBlock = $shell.Substring($bodyIdx, $mainIdx - $bodyIdx).TrimEnd()
+$footerBlock = $shell.Substring($footerIdx)
+# Sanity: full mobile-nav must include industry sub-links
+if ($headerBlock -notmatch 'mob-sub' -or $headerBlock -notmatch 'retail-commercial') {
+  throw "Header extraction incomplete  -  mobile-nav missing industry links"
 }
-$footerBlock = $Matches[1]
+if ($headerBlock -match '<main>') {
+  throw "Header extraction incorrectly includes main"
+}
 
 function Get-Head {
   param($title, $desc, $canonical, $image, $keywords, $schemaExtra)
