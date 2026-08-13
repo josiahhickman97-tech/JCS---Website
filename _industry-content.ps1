@@ -53,7 +53,7 @@ $IndustryPages = @(
       @{ href = "/services/access-control"; title = "Access control"; text = "Keyless entry for back rooms, offices, and multi-tenant commercial suites." }
       @{ href = "/services/intrusion-systems"; title = "Intrusion systems"; text = "Sensors and alarms that pair with video when something opens after hours." }
       @{ href = "/services/network-cabling"; title = "Network cabling"; text = "Clean runs that keep multi-camera stores stable and ready to expand." }
-      @{ href = "/services/support"; title = "Install & support"; text = "Work after close when needed. Phone help in 24 hrs · on-site in 48." }
+      @{ href = "/services/support"; title = "Install & support"; text = "Work after close when needed. Phone help in 24 hrs | on-site in 48." }
     )
     installTitle = "Install around open-for-business hours"
     installLead = "Retail cannot shut down for a week of cabling. We stage work around your open hours, overnight windows, and delivery schedules."
@@ -217,32 +217,33 @@ $IndustryPages = @(
   @{
     slug = "law-enforcement"
     title = "Law Enforcement & Corrections Security | JCS Safety Systems"
-    desc = "Evidence-ready video, audit-ready access, and reliable support for law enforcement and corrections facilities in South Mississippi."
+    desc = "Evidence-ready video, LPR cameras, audit-ready access, and reliable support for law enforcement and corrections facilities in South Mississippi."
     canonical = "https://jcssafetysystems.com/industries/law-enforcement"
     image = "/assets/control-room.jpg"
-    keywords = "law enforcement security systems, police station cameras, corrections access control, evidence room security Mississippi"
+    keywords = "law enforcement LPR cameras, license plate recognition police Mississippi, police station cameras, corrections access control, evidence room security"
     crumb = "Law Enforcement"
     kicker = "Law enforcement & corrections"
     h1 = "Evidence-ready systems that stay online"
-    lead = "These facilities cannot afford gaps in recording, vague access history, or long outages. Documentation, perimeter awareness, and support response times matter as much as the hardware."
+    lead = "These facilities cannot afford gaps in recording, vague access history, or long outages. Documentation, perimeter awareness, license plate recognition (LPR), and support response times matter as much as the hardware."
     outcomes = @(
-      @{ title = "Review-ready recording"; text = "High-resolution video built for investigations  -  not just deterrence posters." }
-      @{ title = "Audit trails that hold up"; text = "Who entered evidence, booking, and restricted zones  -  with timestamps." }
-      @{ title = "Support that shows up"; text = "Phone help within 24 hrs · on-site within 48 when systems matter most." }
+      @{ title = "Review-ready recording"; text = "High-resolution video built for investigations - not just deterrence posters." }
+      @{ title = "LPR vehicle identity"; text = "Capture and search plates at gates, lots, and approaches when policy and mission need it." }
+      @{ title = "Audit trails that hold up"; text = "Who entered evidence, booking, and restricted zones - with timestamps." }
     )
     introTitle = "Public safety facilities need reliability first"
-    intro = "We emphasize situational awareness, controlled interiors, and systems officers can trust under pressure. For JCS that means clean installs, dependable recording, and support SLAs  -  not marketing jargon."
-    tags = @("Evidence rooms", "Perimeter awareness", "Access audits", "Uptime focus")
+    intro = "We emphasize situational awareness, controlled interiors, and systems officers can trust under pressure. That includes investigative video, LPR cameras for vehicle approaches, clean installs, dependable recording, and support SLAs - not marketing jargon."
+    tags = @("Evidence rooms", "LPR cameras", "Perimeter awareness", "Access audits", "Uptime focus")
     sidebarImg = "/assets/control-room.jpg"
     sidebarTitle = "Secure your facility"
-    sidebarText = "Consultations for stations, detention, and public safety facilities."
+    sidebarText = "Consultations for stations, detention, and public safety facilities - including LPR where vehicle tracking matters."
     challengeTitle = "Challenges for stations and secured facilities"
-    challengeLead = "When video is evidence and doors protect sensitive spaces, generic commercial kits are not enough."
+    challengeLead = "When video is evidence, plates matter at the gate, and doors protect sensitive spaces, generic commercial kits are not enough."
     pains = @(
       @{ label = "Challenge 01"; title = "Footage that will not hold up"; problem = "Low quality, short retention, or unreliable recorders waste investigative time and weaken cases."; fix = "Proper placement, resolution, and recording design so reviews are clear and exportable when needed." }
-      @{ label = "Challenge 02"; title = "Evidence and restricted rooms"; problem = "Shared keys and informal access to evidence, armories, and interview spaces create chain-of-custody risk."; fix = "Access control with detailed logs and limited credentials for high-sensitivity doors." }
-      @{ label = "Challenge 03"; title = "Perimeter and lobby pressure"; problem = "Public lobbies, sally ports, and outdoor perimeters mix public access with secured operations."; fix = "Zoned video and door control that keep public areas open while locking down operational spaces." }
-      @{ label = "Challenge 04"; title = "Downtime is unacceptable"; problem = "A dark recorder or dead door controller is an operational incident  -  not a ticket for next week."; fix = "Support commitments (phone within 24 hrs, on-site within 48) plus warranties and proactive maintenance options." }
+      @{ label = "Challenge 02"; title = "Vehicles come and go without identity"; problem = "Parking lots, sally ports, and public approaches see constant vehicle traffic. Standard cameras show a car - not a plate you can search against a BOLO or incident window."; fix = "LPR cameras aimed and lit for plate capture, with searchable plate history tied into your video system where policy allows." }
+      @{ label = "Challenge 03"; title = "Evidence and restricted rooms"; problem = "Shared keys and informal access to evidence, armories, and interview spaces create chain-of-custody risk."; fix = "Access control with detailed logs and limited credentials for high-sensitivity doors." }
+      @{ label = "Challenge 04"; title = "Perimeter and lobby pressure"; problem = "Public lobbies, sally ports, and outdoor perimeters mix public access with secured operations."; fix = "Zoned video, LPR at vehicle control points, and door control that keep public areas open while locking down operational spaces." }
+      @{ label = "Challenge 05"; title = "Downtime is unacceptable"; problem = "A dark recorder or dead door controller is an operational incident - not a ticket for next week."; fix = "Support commitments (phone within 24 hrs, on-site within 48) plus warranties and proactive maintenance options." }
     )
     zoneTitle = "Critical zones in public safety facilities"
     zoneLead = "Exact layouts vary; these zones almost always drive the design conversation."
@@ -251,36 +252,40 @@ $IndustryPages = @(
       @{ title = "Secure interior"; text = "Corridors and doors separating public from operations." }
       @{ title = "Evidence & property"; text = "Controlled entry with audit-ready history." }
       @{ title = "Interview / holding"; text = "Clear recording angles where policy requires coverage." }
-      @{ title = "Perimeter & parking"; text = "Vehicle and pedestrian approaches to the facility." }
-      @{ title = "Server / security room"; text = "Protected infrastructure that keeps systems recording." }
+      @{ title = "Gates, lots & LPR"; text = "Vehicle approaches with license plate recognition cameras where capture quality and search matter." }
+      @{ title = "Server / security room"; text = "Protected infrastructure that keeps video and LPR recording online." }
     )
     solTitle = "What we deploy for public safety sites"
     sols = @(
       @{ href = "/services/video-surveillance"; title = "Investigative video"; text = "Reliable recording, search, and export workflows for review." }
+      @{ href = "/services/video-surveillance"; title = "LPR cameras"; text = "License plate recognition at gates, parking, and facility approaches - searchable plate events for investigations." }
       @{ href = "/services/access-control"; title = "Audit-ready access"; text = "Credentialed doors for evidence, secure corridors, and staff areas." }
       @{ href = "/services/intrusion-systems"; title = "Intrusion zones"; text = "Layered alarms for perimeters and sensitive rooms." }
-      @{ href = "/services/network-cabling"; title = "Hardened cabling"; text = "Clean, documented runs for mission-critical devices." }
+      @{ href = "/services/network-cabling"; title = "Hardened cabling"; text = "Clean, documented runs for mission-critical devices including outdoor LPR." }
       @{ href = "/services/support"; title = "Priority support"; text = "Response windows built for facilities that cannot wait." }
     )
     installTitle = "Install with chain-of-command and continuity in mind"
     installLead = "We coordinate with facility leadership so public hours, secure zones, and ongoing operations stay protected during the upgrade."
     installItems = @(
       "Work scheduled around facility operations and security protocols"
+      "LPR camera aiming, lighting, and lane placement tested for real plate capture - not just a wide lot view"
       "Clear as-built documentation for future staff and audits"
-      "Testing of recording, retention, and door behavior before handoff"
-      "Training for the supervisors who will export and review footage"
+      "Testing of recording, retention, plate search, and door behavior before handoff"
+      "Training for the supervisors who will export video and search LPR events"
     )
     installImg = "/assets/security-guard.jpg"
     faqTitle = "Public safety FAQs"
     faqs = @(
-      @{ q = "Can you improve an aging station system without full replacement?"; a = "Often we can phase upgrades  -  replace failing recorders or critical cameras first, then expand coverage and access control as budget allows." }
+      @{ q = "Do you install LPR cameras for law enforcement facilities?"; a = "Yes. We design and install license plate recognition cameras at gates, parking lots, and vehicle approaches so staff can capture and search plates when investigations or facility security require vehicle identity - not just a wide-angle view of a car." }
+      @{ q = "Where does LPR work best on a station or corrections site?"; a = "Controlled vehicle points - main entry lanes, sally ports, employee lots, and public parking approaches - where vehicles slow or stop and lighting can support plate capture. We assess angles, speed, and lighting before specifying hardware." }
+      @{ q = "Can you improve an aging station system without full replacement?"; a = "Often we can phase upgrades - replace failing recorders or critical cameras first, add LPR at key lanes, then expand coverage and access control as budget allows." }
       @{ q = "Do you support evidence-room access control?"; a = "Yes. Restricted doors with individual credentials and time-stamped logs are a common request for stations and corrections environments." }
-      @{ q = "What are your support response times?"; a = "Phone support within 24 hours and on-site service within 48 hours for covered issues  -  critical when systems support public safety operations." }
-      @{ q = "Will staff be trained on export and review?"; a = "Yes. A system is only useful if supervisors can find and export video when needed. Training is part of go-live." }
+      @{ q = "What are your support response times?"; a = "Phone support within 24 hours and on-site service within 48 hours for covered issues - critical when systems support public safety operations." }
+      @{ q = "Will staff be trained on export, review, and plate search?"; a = "Yes. A system is only useful if supervisors can find footage and LPR events when needed. Training is part of go-live." }
     )
     related = @($i, $k, $h, $r)
     ctaTitle = "Discuss your facility requirements"
-    ctaText = "Tell us about recording needs, secure doors, and support expectations. We will design for reliability first."
+    ctaText = "Tell us about recording needs, LPR lanes, secure doors, and support expectations. We will design for reliability first."
   },
 
   @{
