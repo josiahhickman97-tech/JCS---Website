@@ -37,7 +37,7 @@ function Get-Head {
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="JCS Safety Systems" />
   <meta name="geo.region" content="US-MS" />
-  <meta name="geo.placename" content="South Mississippi" />
+  <meta name="geo.placename" content="Mississippi" />
   <meta name="keywords" content="$keywords" />
   <link rel="canonical" href="$canonical" />
   <meta property="og:type" content="website" />
@@ -70,9 +70,9 @@ function Get-Head {
       "name": "JCS Safety Systems",
       "telephone": "+1-601-337-6852",
       "email": "sales@jcssafetysystems.com",
-      "areaServed": "South Mississippi"
+      "areaServed": "Mississippi"
     },
-    "areaServed": { "@type": "AdministrativeArea", "name": "South Mississippi" }
+    "areaServed": { "@type": "AdministrativeArea", "name": "Mississippi" }
   }
   </script>
   <script type="application/ld+json">

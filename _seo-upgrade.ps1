@@ -18,7 +18,7 @@ function Get-SeoHead($meta) {
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="JCS Safety Systems" />
   <meta name="geo.region" content="US-MS" />
-  <meta name="geo.placename" content="South Mississippi" />
+  <meta name="geo.placename" content="Mississippi" />
   <link rel="canonical" href="$canonical" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="JCS Safety Systems" />
@@ -59,9 +59,9 @@ $localBusiness = @'
     },
     "areaServed": {
       "@type": "AdministrativeArea",
-      "name": "South Mississippi"
+      "name": "Mississippi"
     },
-    "description": "JCS Safety Systems designs, installs, and supports AI-powered video surveillance, access control, intrusion systems, and network cabling in South Mississippi.",
+    "description": "JCS Safety Systems designs, installs, and supports AI-powered video surveillance, access control, intrusion systems, and network cabling in Mississippi.",
     "priceRange": "$$",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -86,7 +86,7 @@ function Get-Chrome {
       <div class="topbar-links">
         <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
         <a href="mailto:sales@jcssafetysystems.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>sales@jcssafetysystems.com</a>
-        <a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>PMB 53 313 Telly Rd | South Mississippi</a>
+        <a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>PMB 53 313 Telly Rd | Mississippi</a>
       </div>
       <span class="hide-sm">Phone support within 24 hrs | On-site within 48 hrs</span>
     </div>
@@ -165,10 +165,10 @@ function Get-Footer {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo"><img src="/assets/logo.png" alt="JCS Safety Systems logo" class="logo-img" width="160" height="102" /></a>
-          <p>AI-powered video surveillance, access control, intrusion systems, and network cabling for South Mississippi.</p>
+          <p>AI-powered video surveillance, access control, intrusion systems, and network cabling for Mississippi.</p>
           <p class="footer-address">
             <strong>PMB 53 313 Telly Rd</strong><br />
-            South Mississippi<br />
+            Mississippi<br />
             <a href="tel:+16013376852">(601) 337-6852</a><br />
             <a href="mailto:sales@jcssafetysystems.com">sales@jcssafetysystems.com</a>
           </p>
@@ -197,7 +197,7 @@ function Get-Footer {
       </div>
       <div class="footer-bottom">
         <span>Copyright 2026 JCS Safety Systems. All rights reserved.</span>
-        <span>Serving South Mississippi | PMB 53 313 Telly Rd</span>
+        <span>Serving Mississippi | PMB 53 313 Telly Rd</span>
       </div>
     </div>
   </footer>
@@ -280,15 +280,15 @@ Get-ChildItem $root -Recurse -Filter *.html | ForEach-Object {
   }
 
   if ($key -eq 'contact') {
-    $html = $html.Replace('Mississippi &amp; surrounding region', 'South Mississippi')
-    $html = $html.Replace('Mississippi & surrounding region', 'South Mississippi')
+    $html = $html.Replace('Mississippi &amp; surrounding region', 'Mississippi')
+    $html = $html.Replace('Mississippi & surrounding region', 'Mississippi')
     if ($html -notmatch '313 Telly') {
       $oldCard = @'
               <div class="info-card">
                 <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
                 <div>
                   <h3>Service area</h3>
-                  <p>South Mississippi<br /><a href="https://jcssafetysystems.com" target="_blank" rel="noopener">jcssafetysystems.com</a></p>
+                  <p>Mississippi<br /><a href="https://jcssafetysystems.com" target="_blank" rel="noopener">jcssafetysystems.com</a></p>
                 </div>
               </div>
 '@
@@ -297,7 +297,7 @@ Get-ChildItem $root -Recurse -Filter *.html | ForEach-Object {
                 <div class="ic-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
                 <div>
                   <h3>Location and service area</h3>
-                  <p><strong>PMB 53 313 Telly Rd</strong><br />South Mississippi<br /><a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener">Get directions</a></p>
+                  <p><strong>PMB 53 313 Telly Rd</strong><br />Mississippi<br /><a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener">Get directions</a></p>
                 </div>
               </div>
 '@

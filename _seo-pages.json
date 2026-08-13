@@ -1,91 +1,91 @@
 {
   "index": {
-    "title": "JCS Safety Systems | Video Surveillance and Access Control in South Mississippi",
-    "description": "AI-powered video surveillance, access control, intrusion systems, and network cabling for businesses and schools in South Mississippi. Free site assessment. Call (601) 337-6852.",
+    "title": "JCS Safety Systems | Video Surveillance and Access Control in Mississippi",
+    "description": "AI-powered video surveillance, access control, intrusion systems, and network cabling for businesses and schools in Mississippi. Free site assessment. Call (601) 337-6852.",
     "path": "/",
     "ogImage": "/assets/hero-security.jpg"
   },
   "solutions": {
     "title": "Security Solutions | Cameras, Access Control and More | JCS Safety Systems",
-    "description": "Explore JCS Safety Systems solutions: video surveillance, keyless access control, network cabling, intrusion alarms, and expert installation across South Mississippi.",
+    "description": "Explore JCS Safety Systems solutions: video surveillance, keyless access control, network cabling, intrusion alarms, and expert installation across Mississippi.",
     "path": "/solutions",
     "ogImage": "/assets/video-surveillance.jpg"
   },
   "about": {
-    "title": "About JCS Safety Systems | South Mississippi Security Experts",
-    "description": "Learn about JCS Safety Systems - design, install, and support for CCTV, access control, and network infrastructure serving South Mississippi.",
+    "title": "About JCS Safety Systems | Mississippi Security Experts",
+    "description": "Learn about JCS Safety Systems - design, install, and support for CCTV, access control, and network infrastructure serving Mississippi.",
     "path": "/about",
     "ogImage": "/assets/team-meeting.jpg"
   },
   "contact": {
     "title": "Contact JCS Safety Systems | Free Quote | PMB 53 313 Telly Rd",
-    "description": "Contact JCS Safety Systems for a free security assessment. PMB 53 313 Telly Rd, South Mississippi. Call (601) 337-6852 or request a quote online.",
+    "description": "Contact JCS Safety Systems for a free security assessment. PMB 53 313 Telly Rd, Mississippi. Call (601) 337-6852 or request a quote online.",
     "path": "/contact",
     "ogImage": "/assets/support.jpg"
   },
   "industries": {
     "title": "Industries We Serve | Security Systems | JCS Safety Systems",
-    "description": "Security systems for retail, K-12 schools, higher education, law enforcement, and industrial sites in South Mississippi.",
+    "description": "Security systems for retail, K-12 schools, higher education, law enforcement, and industrial sites in Mississippi.",
     "path": "/industries",
     "ogImage": "/assets/retail-store.jpg"
   },
   "services/video-surveillance": {
     "title": "Video Surveillance Systems | AI Cameras and LPR | JCS Safety Systems",
-    "description": "Cloud and on-site video surveillance with AI people and vehicle detection, license plate recognition, and remote viewing. Installed in South Mississippi.",
+    "description": "Cloud and on-site video surveillance with AI people and vehicle detection, license plate recognition, and remote viewing. Installed in Mississippi.",
     "path": "/services/video-surveillance",
     "ogImage": "/assets/video-surveillance.jpg"
   },
   "services/access-control": {
     "title": "Access Control and Keyless Entry | JCS Safety Systems",
-    "description": "Keyless, touchless access control with schedules, audit logs, and remote unlock. Cloud or on-premise systems for South Mississippi facilities.",
+    "description": "Keyless, touchless access control with schedules, audit logs, and remote unlock. Cloud or on-premise systems for Mississippi facilities.",
     "path": "/services/access-control",
     "ogImage": "/assets/access-control.jpg"
   },
   "services/network-cabling": {
     "title": "Network Cabling | Fiber and Cat6 Installation | JCS Safety Systems",
-    "description": "Professional structured cabling, fiber optic, and Cat6 installation for security cameras and business networks in South Mississippi.",
+    "description": "Professional structured cabling, fiber optic, and Cat6 installation for security cameras and business networks in Mississippi.",
     "path": "/services/network-cabling",
     "ogImage": "/assets/network-cabling.jpg"
   },
   "services/intrusion-systems": {
     "title": "Intrusion and Alarm Systems | JCS Safety Systems",
-    "description": "Intrusion detection and alarm systems with high-sensitivity sensors and real-time alerts. Protect your South Mississippi facility.",
+    "description": "Intrusion detection and alarm systems with high-sensitivity sensors and real-time alerts. Protect your Mississippi facility.",
     "path": "/services/intrusion-systems",
     "ogImage": "/assets/intrusion-systems.jpg"
   },
   "services/support": {
     "title": "Security Installation and Support | JCS Safety Systems",
-    "description": "Expert security system installation and support. Phone help within 24 hours, on-site within 48 hours. Serving South Mississippi.",
+    "description": "Expert security system installation and support. Phone help within 24 hours, on-site within 48 hours. Serving Mississippi.",
     "path": "/services/support",
     "ogImage": "/assets/support.jpg"
   },
   "industries/retail-commercial": {
     "title": "Retail and Commercial Security Systems | JCS Safety Systems",
-    "description": "Retail security cameras, access control, and AI analytics to reduce theft and protect inventory. Serving South Mississippi businesses.",
+    "description": "Retail security cameras, access control, and AI analytics to reduce theft and protect inventory. Serving Mississippi businesses.",
     "path": "/industries/retail-commercial",
     "ogImage": "/assets/retail-store.jpg"
   },
   "industries/k-12-education": {
     "title": "K-12 School Security Systems | JCS Safety Systems",
-    "description": "School security cameras, controlled entry, and campus video systems for K-12 schools in South Mississippi.",
+    "description": "School security cameras, controlled entry, and campus video systems for K-12 schools in Mississippi.",
     "path": "/industries/k-12-education",
     "ogImage": "/assets/school-campus.jpg"
   },
   "industries/higher-education": {
     "title": "Higher Education Campus Security | JCS Safety Systems",
-    "description": "Campus video surveillance, multi-building access control, and parking LPR for colleges and universities in South Mississippi.",
+    "description": "Campus video surveillance, multi-building access control, and parking LPR for colleges and universities in Mississippi.",
     "path": "/industries/higher-education",
     "ogImage": "/assets/school-campus.jpg"
   },
   "industries/law-enforcement": {
     "title": "Law Enforcement and Corrections Security | JCS Safety Systems",
-    "description": "Reliable recording, perimeter coverage, and access control for law enforcement and corrections facilities in South Mississippi.",
+    "description": "Reliable recording, perimeter coverage, and access control for law enforcement and corrections facilities in Mississippi.",
     "path": "/industries/law-enforcement",
     "ogImage": "/assets/control-room.jpg"
   },
   "industries/industrial": {
     "title": "Industrial Security Systems | Yards, Docks and Plants | JCS Safety Systems",
-    "description": "Industrial video surveillance, LPR, and rugged outdoor security for warehouses, yards, and plants in South Mississippi.",
+    "description": "Industrial video surveillance, LPR, and rugged outdoor security for warehouses, yards, and plants in Mississippi.",
     "path": "/industries/industrial",
     "ogImage": "/assets/warehouse.jpg"
   }

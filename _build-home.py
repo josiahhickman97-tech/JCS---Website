@@ -15,24 +15,24 @@ head = r'''<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JCS Safety Systems | Security Built for How Your Facility Runs | South Mississippi</title>
-  <meta name="description" content="Security designed for real facilities in South Mississippi - AI video and LPR, access control, cabling, intrusion, and support with phone help in 24 hrs and on-site in 48." />
+  <title>JCS Safety Systems | Security Built for How Your Facility Runs | Mississippi</title>
+  <meta name="description" content="Security designed for real facilities in Mississippi - AI video and LPR, access control, cabling, intrusion, and support with phone help in 24 hrs and on-site in 48." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="JCS Safety Systems" />
   <meta name="geo.region" content="US-MS" />
-  <meta name="geo.placename" content="South Mississippi" />
-  <meta name="keywords" content="security systems South Mississippi, video surveillance, access control, LPR cameras, network cabling, intrusion systems, school security, retail security Mississippi" />
+  <meta name="geo.placename" content="Mississippi" />
+  <meta name="keywords" content="security systems Mississippi, video surveillance, access control, LPR cameras, network cabling, intrusion systems, school security, retail security Mississippi" />
   <link rel="canonical" href="https://jcssafetysystems.com/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="JCS Safety Systems" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="JCS Safety Systems | Security Built for How Your Facility Runs" />
-  <meta property="og:description" content="Security designed for real facilities in South Mississippi - AI video and LPR, access control, cabling, intrusion, and support with phone help in 24 hrs and on-site in 48." />
+  <meta property="og:description" content="Security designed for real facilities in Mississippi - AI video and LPR, access control, cabling, intrusion, and support with phone help in 24 hrs and on-site in 48." />
   <meta property="og:url" content="https://jcssafetysystems.com/" />
   <meta property="og:image" content="https://jcssafetysystems.com/assets/hero-security.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="JCS Safety Systems | Security Built for How Your Facility Runs" />
-  <meta name="twitter:description" content="Security designed for real facilities in South Mississippi - AI video and LPR, access control, cabling, intrusion, and support with phone help in 24 hrs and on-site in 48." />
+  <meta name="twitter:description" content="Security designed for real facilities in Mississippi - AI video and LPR, access control, cabling, intrusion, and support with phone help in 24 hrs and on-site in 48." />
   <meta name="twitter:image" content="https://jcssafetysystems.com/assets/hero-security.jpg" />
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/logo.png" />
@@ -56,8 +56,8 @@ head = r'''<!DOCTYPE html>
       "addressRegion": "MS",
       "addressCountry": "US"
     },
-    "areaServed": { "@type": "AdministrativeArea", "name": "South Mississippi" },
-    "description": "JCS Safety Systems designs, installs, and supports AI-powered video surveillance, access control, intrusion systems, and network cabling for facilities across South Mississippi.",
+    "areaServed": { "@type": "AdministrativeArea", "name": "Mississippi" },
+    "description": "JCS Safety Systems designs, installs, and supports AI-powered video surveillance, access control, intrusion systems, and network cabling for facilities across Mississippi.",
     "priceRange": "$$",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -90,7 +90,7 @@ main = r'''  <main>
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container">
         <div>
-          <div class="hero-badge"><span class="dot"></span> South Mississippi security partner</div>
+          <div class="hero-badge"><span class="dot"></span> Mississippi security partner</div>
           <h1>Security designed for how your facility <em>actually runs</em></h1>
           <p class="hero-lead">
             A school vestibule, a retail back door, and an industrial yard are not the same problem. JCS designs video, access, cabling, and intrusion around real risks - then installs and supports systems staff will use.
@@ -434,7 +434,7 @@ main = r'''  <main>
                 <span class="check"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
                 <div>
                   <strong>Local partner, clear response times</strong>
-                  <span>South Mississippi focus with phone help in 24 hrs and on-site in 48.</span>
+                  <span>Mississippi focus with phone help in 24 hrs and on-site in 48.</span>
                 </div>
               </li>
             </ul>
@@ -454,7 +454,7 @@ main = r'''  <main>
       <div class="container">
         <div class="section-header centered" style="margin-bottom:1.75rem;">
           <span class="section-label">In the field</span>
-          <h2 class="section-title">Systems built for real South Mississippi sites</h2>
+          <h2 class="section-title">Systems built for real Mississippi sites</h2>
         </div>
         <div class="home-gallery home-gallery-lg">
           <figure>
@@ -513,7 +513,7 @@ main = r'''  <main>
             <div class="stars" aria-label="5 stars">*****</div>
             <blockquote>"The well-placed cameras allow me to see more than I ever have before. Working with their team was a great experience - clear communication and a system we can actually use."</blockquote>
             <div class="testimonial-meta">
-              <strong>South Mississippi facility</strong>
+              <strong>Mississippi facility</strong>
               <span>Video surveillance customer</span>
             </div>
           </article>

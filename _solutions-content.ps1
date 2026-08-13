@@ -11,10 +11,10 @@ $SolutionPages = @(
   @{
     slug = "video-surveillance"
     title = "Video Surveillance Systems | AI Cameras and LPR | JCS Safety Systems"
-    desc = "AI video surveillance with people and vehicle detection, LPR, and searchable footage. Designed and installed for South Mississippi facilities."
+    desc = "AI video surveillance with people and vehicle detection, LPR, and searchable footage. Designed and installed for Mississippi facilities."
     canonical = "https://jcssafetysystems.com/services/video-surveillance"
     image = "/assets/video-surveillance.jpg"
-    keywords = "security cameras Mississippi, AI video surveillance, LPR cameras South Mississippi, commercial CCTV install"
+    keywords = "security cameras Mississippi, AI video surveillance, LPR cameras Mississippi, commercial CCTV install"
     crumb = "Video Surveillance"
     kicker = "Video surveillance"
     h1 = "See more. Search less. Respond faster."
@@ -25,7 +25,7 @@ $SolutionPages = @(
       @{ title = "Footage you can find"; text = "Searchable events and clear recordings for investigations, disputes, and ops reviews." }
     )
     introTitle = "Video that works when the incident is real"
-    intro = "Leading brands sell cameras as visibility and faster response. We do the same for South Mississippi sites: placement first, then analytics, LPR where plates matter, and recording that holds up when you need proof - not a wall of unusable clips."
+    intro = "Leading brands sell cameras as visibility and faster response. We do the same for Mississippi sites: placement first, then analytics, LPR where plates matter, and recording that holds up when you need proof - not a wall of unusable clips."
     tags = @("AI detection", "LPR options", "Cloud or on-site", "Mobile live view")
     sidebarImg = "/assets/video-2.jpg"
     sidebarTitle = "Map your cameras"
@@ -81,10 +81,10 @@ $SolutionPages = @(
   @{
     slug = "access-control"
     title = "Access Control Systems | Keyless Entry and Audit Logs | JCS Safety Systems"
-    desc = "Keyless access control with schedules, credentials you can revoke, and time-stamped logs for doors and restricted areas across South Mississippi."
+    desc = "Keyless access control with schedules, credentials you can revoke, and time-stamped logs for doors and restricted areas across Mississippi."
     canonical = "https://jcssafetysystems.com/services/access-control"
     image = "/assets/access-control.jpg"
-    keywords = "access control Mississippi, keyless entry systems, door access control install, commercial card access South Mississippi"
+    keywords = "access control Mississippi, keyless entry systems, door access control install, commercial card access Mississippi"
     crumb = "Access Control"
     kicker = "Access control"
     h1 = "Replace mystery keys with proof of who entered"
@@ -151,10 +151,10 @@ $SolutionPages = @(
   @{
     slug = "network-cabling"
     title = "Network Cabling | Cat6 and Fiber Install | JCS Safety Systems"
-    desc = "Structured Cat6 and fiber network cabling for security cameras, access control, and business networks across South Mississippi."
+    desc = "Structured Cat6 and fiber network cabling for security cameras, access control, and business networks across Mississippi."
     canonical = "https://jcssafetysystems.com/services/network-cabling"
     image = "/assets/network-cabling.jpg"
-    keywords = "network cabling Mississippi, Cat6 install, fiber optic cabling South Mississippi, structured cabling security cameras"
+    keywords = "network cabling Mississippi, Cat6 install, fiber optic cabling Mississippi, structured cabling security cameras"
     crumb = "Network Cabling"
     kicker = "Network cabling"
     h1 = "The backbone every camera and door depends on"
@@ -221,10 +221,10 @@ $SolutionPages = @(
   @{
     slug = "intrusion-systems"
     title = "Intrusion and Alarm Systems | JCS Safety Systems"
-    desc = "Intrusion detection and alarm systems with sensors, zones, and alerts that pair with video for after-hours protection in South Mississippi."
+    desc = "Intrusion detection and alarm systems with sensors, zones, and alerts that pair with video for after-hours protection in Mississippi."
     canonical = "https://jcssafetysystems.com/services/intrusion-systems"
     image = "/assets/intrusion-systems.jpg"
-    keywords = "intrusion alarm systems Mississippi, commercial burglar alarm, door sensors, after hours security South Mississippi"
+    keywords = "intrusion alarm systems Mississippi, commercial burglar alarm, door sensors, after hours security Mississippi"
     crumb = "Intrusion Systems"
     kicker = "Intrusion systems"
     h1 = "Know the moment something opens after hours"
@@ -291,10 +291,10 @@ $SolutionPages = @(
   @{
     slug = "support"
     title = "Security System Installation and Support | JCS Safety Systems"
-    desc = "Professional security system installation, training, warranties, and support - phone help within 24 hours and on-site within 48 hours across South Mississippi."
+    desc = "Professional security system installation, training, warranties, and support - phone help within 24 hours and on-site within 48 hours across Mississippi."
     canonical = "https://jcssafetysystems.com/services/support"
     image = "/assets/support.jpg"
-    keywords = "security system installation Mississippi, security camera service, access control support, 24 hour security support South Mississippi"
+    keywords = "security system installation Mississippi, security camera service, access control support, 24 hour security support Mississippi"
     crumb = "Expert Support"
     kicker = "Expert support"
     h1 = "Install done right - and someone who answers after"
@@ -305,7 +305,7 @@ $SolutionPages = @(
       @{ title = "Training that sticks"; text = "The people who arm doors and pull clips know how before we leave." }
     )
     introTitle = "Support is part of the solution - not a footnote"
-    intro = "Enterprise brands talk about lifecycle service because hardware alone fails without people behind it. JCS brings that local: design, install, documentation, warranties, and service agreements so South Mississippi facilities are not abandoned after go-live."
+    intro = "Enterprise brands talk about lifecycle service because hardware alone fails without people behind it. JCS brings that local: design, install, documentation, warranties, and service agreements so Mississippi facilities are not abandoned after go-live."
     tags = @("Professional install", "24 hr phone", "48 hr on-site", "Training")
     sidebarImg = "/assets/support-2.jpg"
     sidebarTitle = "Talk to the team"
