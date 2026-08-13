@@ -1,4 +1,16 @@
-<!DOCTYPE html>
+# -*- coding: utf-8 -*-
+"""Rebuild index.html to match Solutions/Industries problem-led design."""
+from pathlib import Path
+
+root = Path(__file__).resolve().parent
+shell = (root / "solutions.html").read_text(encoding="utf-8")
+body_idx = shell.index("<body>")
+main_idx = shell.index("<main>")
+footer_idx = shell.index('<footer class="site-footer">')
+header = shell[body_idx:main_idx].rstrip()
+footer = shell[footer_idx:]
+
+head = r'''<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -71,92 +83,9 @@
   </script>
   <meta name="google-site-verification" content="q2MnNUmAbGwjL8gBpOulNDEuHMfIPJJm5eceFNAkjpQ" />
 </head>
+'''
 
-<body>
-        <div class="topbar">
-    <div class="container">
-      <div class="topbar-links">
-        <a href="tel:+16013376852"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(601) 337-6852</a>
-        <a href="mailto:sales@jcssafetysystems.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>sales@jcssafetysystems.com</a>
-        <a href="https://maps.google.com/?q=PMB+53+313+Telly+Rd" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>PMB 53 313 Telly Rd | South Mississippi</a>
-      </div>
-      <span class="hide-sm">Phone support within 24 hrs | On-site within 48 hrs</span>
-    </div>
-  </div>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="logo" aria-label="JCS Safety Systems home">
-        <img src="/assets/logo.png" alt="JCS Safety Systems logo" class="logo-img" width="160" height="102" />
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="/">Home</a>
-        <div class="nav-dropdown">
-          <a href="/solutions" class="nav-parent-link">Solutions</a>
-          <button type="button" class="nav-chevron" aria-label="Open Solutions menu" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
-          <div class="dropdown-menu" role="menu">
-            <a href="/services/video-surveillance"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg></span><span><strong>Video Surveillance</strong><small>AI cameras, LPR, cloud and on-site</small></span></a>
-            <a href="/services/access-control"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></span><span><strong>Access Control</strong><small>Keyless entry, schedules and logs</small></span></a>
-            <a href="/services/network-cabling"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span><span><strong>Network Cabling</strong><small>Fiber, Cat6 and structured wiring</small></span></a>
-            <a href="/services/intrusion-systems"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></span><span><strong>Intrusion Systems</strong><small>Alarms, sensors and monitoring</small></span></a>
-            <a href="/services/support"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg></span><span><strong>Expert Support</strong><small>Install, maintenance and service</small></span></a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <a href="/industries" class="nav-parent-link">Industries</a>
-          <button type="button" class="nav-chevron" aria-label="Open Industries menu" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></button>
-          <div class="dropdown-menu" role="menu">
-            <a href="/industries/retail-commercial"><span><strong>Retail and Commercial</strong><small>Stores, shops and businesses</small></span></a>
-            <a href="/industries/k-12-education"><span><strong>K-12 Education</strong><small>Schools and campuses</small></span></a>
-            <a href="/industries/higher-education"><span><strong>Higher Education</strong><small>Colleges and universities</small></span></a>
-            <a href="/industries/law-enforcement"><span><strong>Law Enforcement</strong><small>Corrections and public safety</small></span></a>
-            <a href="/industries/industrial"><span><strong>Industrial</strong><small>Yards, docks and plants</small></span></a>
-          </div>
-        </div>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-      </nav>
-      <div class="header-cta">
-        <a href="/contact" class="btn btn-primary">Get a Free Quote</a>
-        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-      </div>
-    </div>
-  </header>
-  <div class="mobile-nav" aria-label="Mobile navigation">
-    <a href="/">Home</a>
-    <div class="mob-group">
-      <div class="mob-group-row">
-        <a href="/solutions" class="mob-group-link">Solutions</a>
-        <button type="button" class="mob-group-toggle" aria-label="Expand Solutions" aria-expanded="false"></button>
-      </div>
-      <div class="mob-sub">
-        <a href="/services/video-surveillance">Video Surveillance</a>
-        <a href="/services/access-control">Access Control</a>
-        <a href="/services/network-cabling">Network Cabling</a>
-        <a href="/services/intrusion-systems">Intrusion Systems</a>
-        <a href="/services/support">Expert Support</a>
-      </div>
-    </div>
-    <div class="mob-group">
-      <div class="mob-group-row">
-        <a href="/industries" class="mob-group-link">Industries</a>
-        <button type="button" class="mob-group-toggle" aria-label="Expand Industries" aria-expanded="false"></button>
-      </div>
-      <div class="mob-sub">
-        <a href="/industries/retail-commercial">Retail and Commercial</a>
-        <a href="/industries/k-12-education">K-12 Education</a>
-        <a href="/industries/higher-education">Higher Education</a>
-        <a href="/industries/law-enforcement">Law Enforcement</a>
-        <a href="/industries/industrial">Industrial</a>
-      </div>
-    </div>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-    <div class="mob-cta">
-      <a href="tel:+16013376852" class="btn btn-secondary btn-block">(601) 337-6852</a>
-      <a href="/contact" class="btn btn-primary btn-block">Get a Free Quote</a>
-    </div>
-  </div>
-  <main>
+main = r'''  <main>
     <section class="hero">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container">
@@ -573,7 +502,7 @@
         </div>
         <div class="testimonials-grid">
           <article class="testimonial">
-            <div class="stars" aria-label="5 stars"★★★★★</div>
+            <div class="stars" aria-label="5 stars">*****</div>
             <blockquote>"JCS Safety Systems did an amazing job setting up high-quality cameras at 1st Place Express Carwash. The well-placed cameras allow me to see more than I ever have before, and I've seen way fewer customer complaints since they were installed."</blockquote>
             <div class="testimonial-meta">
               <strong>1st Place Express Carwash</strong>
@@ -581,7 +510,7 @@
             </div>
           </article>
           <article class="testimonial">
-            <div class="stars" aria-label="5 stars"★★★★★</div>
+            <div class="stars" aria-label="5 stars">*****</div>
             <blockquote>"The well-placed cameras allow me to see more than I ever have before. Working with their team was a great experience - clear communication and a system we can actually use."</blockquote>
             <div class="testimonial-meta">
               <strong>South Mississippi facility</strong>
@@ -589,7 +518,7 @@
             </div>
           </article>
           <article class="testimonial">
-            <div class="stars" aria-label="5 stars"★★★★★</div>
+            <div class="stars" aria-label="5 stars">*****</div>
             <blockquote>"Cloud-based cameras with instant alerts completely changed how we manage our sites. When something happens after hours, we know - we are not guessing the next morning."</blockquote>
             <div class="testimonial-meta">
               <strong>Multi-site operator</strong>
@@ -613,53 +542,43 @@
       </div>
     </section>
   </main>
+'''
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo"><img src="/assets/logo.png" alt="JCS Safety Systems logo" class="logo-img" width="160" height="102" /></a>
-          <p>AI-powered video surveillance, access control, intrusion systems, and network cabling for South Mississippi.</p>
-          <p class="footer-address">
-            <strong>PMB 53 313 Telly Rd</strong><br />
-            South Mississippi<br />
-            <a href="tel:+16013376852">(601) 337-6852</a><br />
-            <a href="mailto:sales@jcssafetysystems.com">sales@jcssafetysystems.com</a>
-          </p>
-          <a href="tel:+16013376852" class="btn btn-outline btn-sm">(601) 337-6852</a>
-        </div>
-        <div class="footer-col"><h4>Solutions</h4><ul>
-          <li><a href="/services/video-surveillance">Video Surveillance</a></li>
-          <li><a href="/services/access-control">Access Control</a></li>
-          <li><a href="/services/network-cabling">Network Cabling</a></li>
-          <li><a href="/services/intrusion-systems">Intrusion Systems</a></li>
-          <li><a href="/services/support">Expert Support</a></li>
-        </ul></div>
-        <div class="footer-col"><h4>Industries</h4><ul>
-          <li><a href="/industries/retail-commercial">Retail and Commercial</a></li>
-          <li><a href="/industries/k-12-education">K-12 Education</a></li>
-          <li><a href="/industries/higher-education">Higher Education</a></li>
-          <li><a href="/industries/law-enforcement">Law Enforcement</a></li>
-          <li><a href="/industries/industrial">Industrial</a></li>
-        </ul></div>
-        <div class="footer-col"><h4>Company</h4><ul>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/solutions">All Solutions</a></li>
-          <li><a href="/industries">All Industries</a></li>
-        </ul></div>
-      </div>
-      <div class="footer-bottom">
-        <span>Copyright 2026 JCS Safety Systems. All rights reserved.</span>
-        <span>Serving South Mississippi | PMB 53 313 Telly Rd</span>
-      </div>
-    </div>
-  </footer>
-  <!-- Vercel Web Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-  <script src="/js/main.js"></script>
-</body>
-</html>
+html = head + "\n" + header + "\n" + main + "\n  " + footer
+(root / "index.html").write_text(html, encoding="utf-8", newline="\n")
+
+css_path = root / "css" / "styles.css"
+css = css_path.read_text(encoding="utf-8")
+if ".testimonial-meta" not in css:
+    css += """
+
+/* Home testimonial attribution (replaces broken footer nesting) */
+.testimonial-meta {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.testimonial-meta strong {
+  display: block;
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 0.15rem;
+}
+.testimonial-meta span {
+  font-size: 0.85rem;
+  color: var(--slate-400);
+}
+"""
+    css_path.write_text(css, encoding="utf-8", newline="\n")
+    print("CSS updated")
+
+idx = (root / "index.html").read_text(encoding="utf-8")
+print(f"index size: {len(idx)}")
+print(f"footers: {idx.count('class=\"site-footer\"')}")
+print(f"broken nest: {'site-footer' in idx[idx.find('blockquote'):idx.find('blockquote')+400] if 'blockquote' in idx else 'n/a'}")
+print(f"main after mob-cta: {'mob-cta' in idx and idx.find('mob-cta') < idx.find('<main>')}")
+print(f"ind-panel count: {idx.count('ind-panel')}")
+print(f"cta-banner: {'cta-banner' in idx}")
+print(f"testimonial-meta: {'testimonial-meta' in idx}")
+print(f"All Industries footer: {'All Industries' in idx}")
+print("OK")
