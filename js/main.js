@@ -113,6 +113,7 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const data = new FormData(form);
+      const facility = (data.get("facility") || "").toString().trim();
       const name = (data.get("name") || "").toString().trim();
       const email = (data.get("email") || "").toString().trim();
       const phone = (data.get("phone") || "").toString().trim();
@@ -125,9 +126,9 @@
       if (errorEl) errorEl.classList.remove("show");
       if (success) success.classList.remove("show");
 
-      if (!name || !email || !message) {
+      if (!facility || !name || !email || !message) {
         if (errorEl) {
-          errorEl.textContent = "Please fill in your name, email, and message.";
+          errorEl.textContent = "Please select a facility type and fill in your name, email, and message.";
           errorEl.classList.add("show");
         }
         return;
@@ -138,6 +139,11 @@
         btn.disabled = true;
       }
 
+      const subjectParts = ["Website inquiry"];
+      if (facility) subjectParts.push(facility);
+      if (service) subjectParts.push(service);
+      const subjectLine = `${subjectParts.join(" — ")} from ${name}`;
+
       try {
         const res = await fetch("https://formsubmit.co/ajax/sales@jcssafetysystems.com", {
           method: "POST",
@@ -146,12 +152,13 @@
             Accept: "application/json",
           },
           body: JSON.stringify({
+            facility,
             name,
             email,
             phone: phone || "—",
             service: service || "—",
             message,
-            _subject: `Website inquiry${service ? " — " + service : ""} from ${name}`,
+            _subject: subjectLine,
             _template: "table",
             _captcha: "false",
           }),
@@ -165,9 +172,9 @@
         }
         form.reset();
       } catch (err) {
-        const subject = encodeURIComponent(`Website inquiry${service ? " — " + service : ""} from ${name}`);
+        const subject = encodeURIComponent(subjectLine);
         const body = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "—"}\nService interest: ${service || "—"}\n\nMessage:\n${message}`
+          `Facility: ${facility}\nName: ${name}\nEmail: ${email}\nPhone: ${phone || "—"}\nService interest: ${service || "—"}\n\nMessage:\n${message}`
         );
         if (errorEl) {
           errorEl.textContent = "Could not send through the form. Opening your email app instead…";

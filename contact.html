@@ -213,6 +213,18 @@
             <div class="form-success" role="status">Thank you — your message was sent. We’ll get back to you shortly.</div>
             <div class="form-error" role="alert"></div>
             <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="facility">What kind of site is this?</label>
+                <p class="form-note" id="facility-help">We design for commercial, industrial, and public facilities — not home alarm packages.</p>
+                <select id="facility" name="facility" required aria-describedby="facility-help">
+                  <option value="">Select one…</option>
+                  <option value="Commercial / retail / office">Commercial / retail / office</option>
+                  <option value="Industrial / warehouse / plant / port">Industrial / warehouse / plant / port</option>
+                  <option value="School / campus / government">School / campus / government</option>
+                  <option value="Multifamily / apartment property">Multifamily / apartment property (commercial property — not a single-family home)</option>
+                  <option value="Other facility">Other facility (describe below)</option>
+                </select>
+              </div>
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Full name *</label>
@@ -245,8 +257,9 @@
                 <label for="message">How can we help? *</label>
                 <textarea id="message" name="message" required placeholder="Site type, approximate size, timeline, or questions…"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
-              <p class="form-note">Messages go to sales@jcssafetysystems.com. For fastest response, call <a href="tel:+16013376852" style="color:var(--cyan-400);">(601) 337-6852</a>. First form submission may require confirming the email once via FormSubmit.</p>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Request facility assessment</button>
+              <p class="form-note">Phone help within 24 hours. On-site within 48. <a href="tel:+16013376852" style="color:var(--cyan-400);">(601) 337-6852</a></p>
+              <p class="form-note">Messages go to sales@jcssafetysystems.com. First form submission may require confirming the email once via FormSubmit.</p>
             </form>
           </div>
         </div>
