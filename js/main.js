@@ -99,6 +99,18 @@
     });
   });
 
+  let contactConversionSent = false;
+  function fireContactConversion() {
+    if (contactConversionSent) return;
+    if (typeof gtag !== "function") return;
+    gtag("event", "conversion", {
+      send_to: "AW-18397273274/ghTICN_o2_UcELq5wMRE",
+      value: 1.0,
+      currency: "USD"
+    });
+    contactConversionSent = true;
+  }
+
   // Contact form → FormSubmit.co
   const form = document.getElementById("contact-form");
   if (form) {
@@ -165,6 +177,8 @@
         });
 
         if (!res.ok) throw new Error("Send failed");
+
+        fireContactConversion();
 
         if (success) {
           success.textContent = "Thank you — your message was sent. We'll get back to you shortly.";
