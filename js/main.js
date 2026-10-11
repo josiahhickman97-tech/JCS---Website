@@ -138,9 +138,9 @@
       if (errorEl) errorEl.classList.remove("show");
       if (success) success.classList.remove("show");
 
-      if (!facility || !name || !email || !message) {
+      if (!name || !phone) {
         if (errorEl) {
-          errorEl.textContent = "Please select a facility type and fill in your name, email, and message.";
+          errorEl.textContent = "Please fill in your name and phone number.";
           errorEl.classList.add("show");
         }
         return;

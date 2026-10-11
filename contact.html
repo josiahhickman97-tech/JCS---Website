@@ -12,7 +12,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact JCS Safety Systems | Request a Site Assessment</title>
-  <meta name="description" content="Call (601) 337-6852 or send a short note about your facility to request a site assessment. Commercial, government, and industrial sites in South Mississippi." />
+  <meta name="description" content="Call (601) 337-6852 or send a short note about your facility to request a site assessment. Commercial, government, and industrial sites in Central and South Mississippi." />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="JCS Safety Systems" />
   <meta name="geo.region" content="US-MS" />
@@ -22,12 +22,12 @@
   <meta property="og:site_name" content="JCS Safety Systems" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Contact JCS Safety Systems | Request a Site Assessment" />
-  <meta property="og:description" content="Call (601) 337-6852 or send a short note about your facility to request a site assessment. Commercial, government, and industrial sites in South Mississippi." />
+  <meta property="og:description" content="Call (601) 337-6852 or send a short note about your facility to request a site assessment. Commercial, government, and industrial sites in Central and South Mississippi." />
   <meta property="og:url" content="https://jcssafetysystems.com/contact" />
   <meta property="og:image" content="https://jcssafetysystems.com/assets/support.jpg?v=orig2" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact JCS Safety Systems | Request a Site Assessment" />
-  <meta name="twitter:description" content="Call (601) 337-6852 or send a short note about your facility to request a site assessment. Commercial, government, and industrial sites in South Mississippi." />
+  <meta name="twitter:description" content="Call (601) 337-6852 or send a short note about your facility to request a site assessment. Commercial, government, and industrial sites in Central and South Mississippi." />
   <meta name="twitter:image" content="https://jcssafetysystems.com/assets/support.jpg?v=orig2" />
   <link rel="icon" href="/assets/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/logo.png" />
@@ -51,7 +51,7 @@
       "addressCountry": "US"
     },
     "areaServed": { "@type": "State", "name": "Mississippi" },
-    "description": "JCS Safety Systems designs, installs, and supports AI-powered video surveillance, access control, intrusion systems, and network cabling for commercial, school, government, and industrial facilities in South Mississippi.",
+    "description": "JCS Safety Systems designs, installs, and supports AI-powered video surveillance, access control, intrusion systems, and network cabling for commercial, school, government, and industrial facilities in Central and South Mississippi.",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Security Solutions",
@@ -163,7 +163,7 @@
           <span>Contact</span>
         </nav>
         <h1>Speak to an expert today</h1>
-        <p class="lead">Request a site assessment or a quote. We stay in communication until the job is done — drop us a line anytime you’re ready.</p>
+        <p class="lead">Request a site assessment. We stay in communication until the job is done — drop us a line anytime you’re ready.</p>
       </div>
     </section>
 
@@ -208,13 +208,13 @@
           <div class="form-panel">
             <h2 style="font-size:1.35rem;margin-bottom:0.35rem;">Request a site assessment</h2>
             <p style="font-size:0.9rem;margin-bottom:1.5rem;">Tell us about your project. We’ll follow up to schedule a conversation or site visit.</p>
+            <form id="contact-form" novalidate>
             <div class="form-success" role="status">Thank you — your message was sent. We’ll get back to you shortly.</div>
             <div class="form-error" role="alert"></div>
-            <form id="contact-form" novalidate>
               <div class="form-group">
-                <label for="facility">What kind of site is this?</label>
+                <label for="facility">What kind of site is this? (optional)</label>
                 <p class="form-note" id="facility-help">We design for commercial, industrial, and public facilities — not home alarm packages.</p>
-                <select id="facility" name="facility" required aria-describedby="facility-help">
+                <select id="facility" name="facility" aria-describedby="facility-help">
                   <option value="">Select one…</option>
                   <option value="Commercial / retail / office">Commercial / retail / office</option>
                   <option value="Industrial / warehouse / plant / port">Industrial / warehouse / plant / port</option>
@@ -229,17 +229,18 @@
                   <input type="text" id="name" name="name" required placeholder="Jane Smith" autocomplete="name" />
                 </div>
                 <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input type="email" id="email" name="email" required placeholder="you@company.com" autocomplete="email" />
+                  <label for="email">Email (optional)</label>
+                  <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="phone" placeholder="(601) 555-0100" autocomplete="tel" />
+                  <label for="phone">Phone *</label>
+                  <input type="tel" id="phone" name="phone" required placeholder="(601) 555-0100" autocomplete="tel" aria-describedby="phone-help" />
+                  <p class="form-note" id="phone-help">So we can call to schedule your site assessment.</p>
                 </div>
                 <div class="form-group">
-                  <label for="service">Service interest</label>
+                  <label for="service">Service interest (optional)</label>
                   <select id="service" name="service">
                     <option value="">Select one…</option>
                     <option>Video Surveillance</option>
@@ -252,10 +253,10 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="message">How can we help? *</label>
-                <textarea id="message" name="message" required placeholder="Site type, approximate size, timeline, or questions…"></textarea>
+                <label for="message">How can we help? (optional)</label>
+                <textarea id="message" name="message" placeholder="Site type, approximate size, timeline, or questions…"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg btn-block">Request facility assessment</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Request a Site Assessment</button>
               <p class="form-note">Prefer to talk? Call <a href="tel:+16013376852" style="color:var(--cyan-400);">(601) 337-6852</a></p>
             </form>
           </div>
@@ -269,7 +270,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo"><img src="/assets/opt/logo-360.png" alt="JCS Safety Systems logo" class="logo-img" width="160" height="102" /></a>
-          <p>AI-powered video surveillance, access control, intrusion systems, and network cabling for commercial, school, and public facilities in South Mississippi.</p>
+          <p>AI-powered video surveillance, access control, intrusion systems, and network cabling for commercial, school, and public facilities in Central and South Mississippi.</p>
           <p class="footer-address">
             Serving Central and South Mississippi.<br />
             <a href="tel:+16013376852">(601) 337-6852</a><br />
